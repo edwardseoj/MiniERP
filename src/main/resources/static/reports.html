@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TindahanPRO - Reports</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      color: #111;
+    }
+
+    header {
+      background: #111154;
+      padding: 20px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .logo img {
+      height: 100px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin: 30px 0 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .dashboard {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      border: 2px solid black;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #111154;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #ffeeba;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 6px;
+      color: #856404;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Unique badges for alerts */
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .low-stock { background: #ffc107; color: white; }
+    .out-stock { background: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+<header>TindahanPRO Reports</header>
+
+<h2>Sales & Inventory Dashboard</h2>
+
+<div class="dashboard">
+  <section>
+    <h3>DAILY SALES REPORT</h3>
+    <p>Total Sales: <strong>₱500</strong></p>
+  </section>
+
+  <section>
+    <h3>LOW STOCK ALERTS</h3>
+    <ul>
+      <li>Item A - Only 3 left <span class="badge low-stock">Low</span></li>
+      <li>Item B - Out of stock <span class="badge out-stock">Out</span></li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>

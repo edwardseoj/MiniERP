@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TindahanPRO - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          background: #f4f6f9;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100vh;
+        }
+        /* Top container (header bar) */
+        header {
+          width: 100%;
+          background: #fff; /* white background */
+          padding: 8px 20px; /* smaller height */
+          display: flex;
+          justify-content: flex-start; /* logo on the left */
+          align-items: center;
+          border-bottom: 2px solid #ddd; /* subtle border */
+        }
+        header img {
+          width: 180px; /* logo size */
+        }
+        .login-box {
+          background: #fff;
+          padding: 60px; /* bigger padding */
+          border-radius: 12px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+          width: 500px; /* bigger width */
+          margin-top: 60px; /* space below header */
+          text-align: center;
+          border: 2px solid #000; /* black border */
+        }
+
+        .login-box h2 {
+          margin-bottom: 20px;
+          color: #000000;
+          font-size: 28px; /* bigger heading */
+        }
+        .login-box p {
+          margin-bottom: 30px;
+          color: #555;
+          font-size: 16px; /* bigger text */
+        }
+        label {
+          display: block;
+          margin: 15px 0 8px;
+          font-weight: bold;
+          color: #000; /* black labels */
+          font-size: 16px; /* bigger label */
+          text-align: left;
+        }
+        input[type="email"], input[type="password"] {
+          width: 100%;
+          padding: 16px; /* bigger textbox */
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          margin-bottom: 15px;
+          font-size: 16px;
+        }
+        small {
+          display: block;
+          margin-bottom: 20px;
+          font-size: 13px;
+          color: #666;
+          text-align: left;
+        }
+        .checkbox {
+          margin: 15px 0;
+          font-size: 15px;
+          text-align: left;
+          display: flex;
+          align-items: center;
+        }
+
+        .checkbox input {
+            margin-right: 8px;
+        }
+
+        .checkbox label {
+            margin: 0;
+            font-weight: normal;
+        }
+        button {
+          width: 100%;
+          padding: 16px; /* bigger button */
+          background: #000;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          font-weight: bold;
+          cursor: pointer;
+          margin-top: 15px;
+          font-size: 18px; /* bigger text */
+        }
+        button:hover {
+          background: #333;
+        }
+    </style>
+</head>
+<body>
+<!-- Top container with logo on the left -->
+<header>
+    <img src="assets/TindahanPRO-Logo.png" alt="TindahanPRO Logo">
+</header>
+
+<!-- Login container -->
+<div class="login-box">
+    <h2>LOGIN</h2>
+    <p>Log in with your email address and password.</p>
+    <form>
+        <label>EMAIL ADDRESS *</label>
+        <input type="email" placeholder="Enter a valid email" required>
+
+        <label>PASSWORD *</label>
+        <input type="password" placeholder="Enter your password" required>
+        <small>Password must be 8–20 characters, include letters and numbers, and may use symbols.</small>
+
+        <div class="checkbox">
+            <input type="checkbox" id="showPass">
+            <label for="showPass">Show my password</label>
+        </div>
+
+        <button type="submit">LOG IN</button>
+    </form>
+</div>
+
+</body>
+</html>

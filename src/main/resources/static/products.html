@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TindahanPRO - Products</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      color: #111;
+    }
+
+    header {
+      background: #111154;
+      padding: 20px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .add-btn {
+      background: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s ease-in-out;
+      margin-bottom: 20px;
+    }
+
+    .add-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    th {
+      background: #111154;
+      color: white;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    tr:hover {
+      background: #eef3ff;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .action-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      margin: 0 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .action-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+
+    .view-btn {
+      background: #007bff;
+      color: white;
+      border: 1px solid black;
+    }
+
+    .edit-btn {
+      background: #ffc107;
+      color: white;
+      border: 1px solid black;
+    }
+
+    .delete-btn {
+      background: #dc3545;
+      color: white;
+      border: 1px solid black;
+    }
+
+
+    /* Pagination */
+    .pagination {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .pagination button {
+      border: none;
+      background: #111154;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+
+    .pagination button:hover {
+      background: #007bff;
+    }
+  </style>
+</head>
+<body>
+<header>TindahanPRO Product Management</header>
+<div class="container">
+  <h2>Manage Your Inventory</h2>
+  <button class="add-btn">Add Product</button>
+
+  <table>
+    <tr>
+      <th>ID</th><th>Name</th><th>Price</th><th>Stock</th><th>Actions</th>
+    </tr>
+    <tr>
+      <td>1</td><td>Sample Item</td><td>₱50</td><td>20</td>
+      <td>
+        <button class="action-btn view-btn">View</button>
+        <button class="action-btn edit-btn">Edit</button>
+        <button class="action-btn delete-btn">Delete</button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="pagination">
+    <button>Previous</button>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next</button>
+  </div>
+</div>
+</body>
+</html>
