@@ -4,6 +4,9 @@
 
 package com.mycompany.softdesgui;
 
+import Swing.JFrame1;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author macbookpro
@@ -11,6 +14,8 @@ package com.mycompany.softdesgui;
 public class SoftDesGUI {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SwingUtilities.invokeLater(() -> {
+            new JFrame1().setVisible(true);
+        });
     }
 }
