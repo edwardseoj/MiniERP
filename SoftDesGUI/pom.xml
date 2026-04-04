@@ -10,4 +10,5 @@
         <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>com.mycompany.softdesgui.SoftDesGUI</exec.mainClass>
     </properties>
+    <name>TindahanPRO</name>
 </project>

@@ -807,8 +807,6 @@
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="DailySalesScreen">
-              <Properties>
-              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -864,8 +862,6 @@
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="LowStockScreen">
-              <Properties>
-              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">

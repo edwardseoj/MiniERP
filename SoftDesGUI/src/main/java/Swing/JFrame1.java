@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.softdesgui;
+package Swing;
 
 /**
  *
@@ -140,6 +140,8 @@ public class JFrame1 extends javax.swing.JFrame {
 
         ProductButton.setText("Product");
         ProductButton.addActionListener(this::ProductButtonActionPerformed);
+
+        DashboardScreen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout DashboardScreenLayout = new javax.swing.GroupLayout(DashboardScreen);
         DashboardScreen.setLayout(DashboardScreenLayout);
@@ -337,6 +339,8 @@ public class JFrame1 extends javax.swing.JFrame {
         BackButton2.setText("BACK");
         BackButton2.addActionListener(this::BackButton2ActionPerformed);
 
+        SubtotalScreen2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
         javax.swing.GroupLayout SubtotalScreen2Layout = new javax.swing.GroupLayout(SubtotalScreen2);
         SubtotalScreen2.setLayout(SubtotalScreen2Layout);
         SubtotalScreen2Layout.setHorizontalGroup(
@@ -385,6 +389,8 @@ public class JFrame1 extends javax.swing.JFrame {
 
         PriceLabel.setText("Prrice");
 
+        ProductScreen2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
         javax.swing.GroupLayout ProductScreen2Layout = new javax.swing.GroupLayout(ProductScreen2);
         ProductScreen2.setLayout(ProductScreen2Layout);
         ProductScreen2Layout.setHorizontalGroup(
@@ -395,6 +401,8 @@ public class JFrame1 extends javax.swing.JFrame {
             ProductScreen2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 463, Short.MAX_VALUE)
         );
+
+        PriceScreen2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout PriceScreen2Layout = new javax.swing.GroupLayout(PriceScreen2);
         PriceScreen2.setLayout(PriceScreen2Layout);
@@ -746,7 +754,6 @@ public class JFrame1 extends javax.swing.JFrame {
     private javax.swing.JPanel SubtotalPanel2;
     private javax.swing.JPanel SubtotalScreen;
     private javax.swing.JPanel SubtotalScreen2;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }
