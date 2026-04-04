@@ -4,8 +4,7 @@
 
 package com.mycompany.softdesgui;
 
-import Swing.JFrame1;
-import javax.swing.SwingUtilities;
+import testcode.TestDatabaseConnection;
 
 /**
  *
@@ -14,8 +13,13 @@ import javax.swing.SwingUtilities;
 public class SoftDesGUI {
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            new JFrame1().setVisible(true);
-        });
+
+
+        TestDatabaseConnection.testConnection();
+
+
+//        SwingUtilities.invokeLater(() -> {
+//            new JFrame1().setVisible(true);
+//        });
     }
 }
