@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Swing;
+package Admin;
 
 /**
  *
@@ -63,6 +63,7 @@ public class AdminEditDelete extends javax.swing.JFrame {
         AddProductBtn.addActionListener(this::AddProductBtnActionPerformed);
 
         ChangeAccountBtn.setText("Change Account");
+        ChangeAccountBtn.addActionListener(this::ChangeAccountBtnActionPerformed);
 
         PowerOffBtn.setText("Power OFF");
 
@@ -341,6 +342,12 @@ public class AdminEditDelete extends javax.swing.JFrame {
         add.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_AddProductBtnActionPerformed
+
+    private void ChangeAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeAccountBtnActionPerformed
+        AdminLogin login = new AdminLogin();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ChangeAccountBtnActionPerformed
 
     /**
      * @param args the command line arguments

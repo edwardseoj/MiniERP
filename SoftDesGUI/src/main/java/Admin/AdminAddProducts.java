@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Swing;
+package Admin;
 
 /**
  *
@@ -39,8 +39,8 @@ public class AdminAddProducts extends javax.swing.JFrame {
         AddProductStockField = new javax.swing.JTextField();
         AddProductPriceField = new javax.swing.JTextField();
         AddProductDescField = new javax.swing.JTextField();
-        ResetBtn = new javax.swing.JButton();
         AddBtn = new javax.swing.JButton();
+        ResetBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
@@ -57,6 +57,7 @@ public class AdminAddProducts extends javax.swing.JFrame {
         EditDeleteBtn.addActionListener(this::EditDeleteBtnActionPerformed);
 
         ChangeAccountBtn.setText("Change Account");
+        ChangeAccountBtn.addActionListener(this::ChangeAccountBtnActionPerformed);
 
         PowerOffBtn.setText("Power OFF");
 
@@ -105,9 +106,9 @@ public class AdminAddProducts extends javax.swing.JFrame {
 
         AddProductDescField.setText("Description");
 
-        ResetBtn.setText("Reset");
-
         AddBtn.setText("Add");
+
+        ResetBtn.setText("Reset");
 
         javax.swing.GroupLayout AddProductPanelLayout = new javax.swing.GroupLayout(AddProductPanel);
         AddProductPanel.setLayout(AddProductPanelLayout);
@@ -186,6 +187,12 @@ public class AdminAddProducts extends javax.swing.JFrame {
         editDelete.setVisible((true));
         this.dispose();
     }//GEN-LAST:event_EditDeleteBtnActionPerformed
+
+    private void ChangeAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChangeAccountBtnActionPerformed
+        AdminLogin login = new AdminLogin();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ChangeAccountBtnActionPerformed
 
     /**
      * @param args the command line arguments

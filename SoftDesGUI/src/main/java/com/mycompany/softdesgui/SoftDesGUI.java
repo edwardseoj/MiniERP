@@ -5,7 +5,7 @@
 package com.mycompany.softdesgui;
 
 
-import Swing.AdminLogin;
+import Admin.AdminLogin;
 
 import javax.swing.SwingUtilities;
 
