@@ -4,10 +4,10 @@
 
 package com.mycompany.softdesgui;
 
-
 import Swing.AdminLogin;
 
 import javax.swing.SwingUtilities;
+import testcode.TestDatabaseConnection;
 
 /**
  *
@@ -16,10 +16,13 @@ import javax.swing.SwingUtilities;
 public class SoftDesGUI {
 
     public static void main(String[] args) {
+
         SwingUtilities.invokeLater(() -> {
-
             new AdminLogin().setVisible(true);
-
         });
+
+//        TestDatabaseConnection.testConnection();
+
+
     }
 }
