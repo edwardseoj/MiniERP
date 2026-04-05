@@ -1,4 +1,14 @@
 /home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/com/mycompany/softdesgui/SoftDesGUI.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/dao/CRUDDao.java
 /home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/database/Database.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/model/Employee.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/model/Product.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/model/Receipt.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/service/CRUDService.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/swing/AdminAddProducts.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/swing/AdminDashboard.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/swing/AdminEditDelete.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/swing/AdminLogin.java
+/home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/swing/AdminReports.java
 /home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/swing/JFrame1.java
 /home/cereal/NetBeansProjects/TindahanPRO/SoftDesGUI/src/main/java/testcode/TestDatabaseConnection.java
