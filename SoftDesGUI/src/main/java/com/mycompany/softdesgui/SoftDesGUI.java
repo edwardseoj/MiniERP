@@ -4,7 +4,9 @@
 
 package com.mycompany.softdesgui;
 
-import Swing.JFrame1;
+
+import Swing.AdminLogin;
+
 import javax.swing.SwingUtilities;
 
 /**
@@ -15,7 +17,9 @@ public class SoftDesGUI {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new JFrame1().setVisible(true);
+
+            new AdminLogin().setVisible(true);
+
         });
     }
 }
