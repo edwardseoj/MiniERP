@@ -1,2 +1,4 @@
-Swing/JFrame1.class
 com/mycompany/softdesgui/SoftDesGUI.class
+database/Database.class
+testcode/TestDatabaseConnection.class
+swing/JFrame1.class

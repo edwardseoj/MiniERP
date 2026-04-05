@@ -28,20 +28,17 @@ public class Database {
 	}
 
 	public Connection connect(){
-		if(connection == null){
-			String url = "jdbc:mariadb://localhost:3306/TindahanPRO";
-			String username = "root";
-			String password = "";
+		try {
+			if(connection == null || connection.isClosed()){
+				String url = "jdbc:mariadb://localhost:3306/TindahanPRO";
+				String username = "root";
+				String password = "";
 
-			try {
-				Class.forName("org.mariadb.jdbc.Driver");
 				connection = DriverManager.getConnection(url, username, password);
 				System.out.println("Connected to database");
-			} catch (ClassNotFoundException | SQLException e) {
-				e.printStackTrace();
-				System.out.println("Failed to connect to database");
-				// Handle exception appropriately
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return connection;
 	}
@@ -50,11 +47,11 @@ public class Database {
 		if(connection != null){
 			try{
 				connection.close();
+				connection = null;
 				System.out.println("Disconnected from database");
 			}catch (SQLException e){
 				e.printStackTrace();
 				System.out.println("Failed to disconnect from database");
-				// Handle exception appropriately
 			}
 		}
 	}
