@@ -1,6 +1,7 @@
 package testcode;
 
 import database.Database;
+import database.DatabaseInit;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -21,6 +22,7 @@ public class TestDatabaseConnection {
 
         // Connection test
         Connection conn = db1.connect();
+        DatabaseInit.intializeDatabase(conn);
         db1.disconnect();
         System.out.println();
 

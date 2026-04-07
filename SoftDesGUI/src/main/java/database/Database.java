@@ -31,13 +31,16 @@ public class Database {
 		try {
 			if(connection == null || connection.isClosed()){
 				String url = "jdbc:mariadb://localhost:3306/TindahanPRO";
-				String username = "root";
-				String password = "";
+				String username = "root";  // Change this to your actual MariaDB username
+				String password = "";  // Change this to your actual MariaDB password
 
+				Class.forName("org.mariadb.jdbc.Driver");
 				connection = DriverManager.getConnection(url, username, password);
 				System.out.println("Connected to database");
 			}
-		} catch (SQLException e) {
+		} catch (SQLException e ) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 		return connection;

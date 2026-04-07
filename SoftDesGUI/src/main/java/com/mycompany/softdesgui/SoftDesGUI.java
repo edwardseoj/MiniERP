@@ -17,11 +17,11 @@ public class SoftDesGUI {
 
     public static void main(String[] args) {
 
-        SwingUtilities.invokeLater(() -> {
-            new AdminLogin().setVisible(true);
-        });
+//        SwingUtilities.invokeLater(() -> {
+//            new AdminLogin().setVisible(true);
+//        });
 
-//        TestDatabaseConnection.testConnection();
+        TestDatabaseConnection.testConnection();
 
 
     }
