@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/MiniERP-GUI-Barebones.iml" filepath="$PROJECT_DIR$/.idea/MiniERP-GUI-Barebones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TindahanPRO.iml" filepath="$PROJECT_DIR$/TindahanPRO.iml" />
     </modules>
   </component>
 </project>

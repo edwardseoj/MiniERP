@@ -3,10 +3,14 @@ package dao;
 import model.Product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CRUDDao {
 
+    // Create
     public void add(Product product, Connection conn){
         // sql query to add
         String statement = "INSERT INTO products (name, stock, price, description) VALUES (?, ?, ?, ?)";
@@ -24,4 +28,58 @@ public class CRUDDao {
             System.out.println("Failed to add product");
         }
     }
+
+    // Read
+    public List<Product> getAllProducts(Connection conn){
+        List<Product> allProducts = new ArrayList<>();
+        try{
+            PreparedStatement ps = conn.prepareStatement("SELECT * FROM products");
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()){
+                Product product = new Product(
+                        rs.getString("name"),
+                        rs.getInt("stock"),
+                        rs.getDouble("price"),
+                        rs.getString("description")
+                );
+                allProducts.add(product);
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return allProducts;
+    }
+
+    // Update
+    public void updateProduct(Connection conn, int id, Product product){
+        try{
+            PreparedStatement ps = conn.prepareStatement("UPDATE products " +
+                    "SET name = ?, stock = ?, price = ?, description = ? " +
+                    "WHERE id = ?");
+            ps.setString(1, product.getName());
+            ps.setInt(2, product.getStock());
+            ps.setDouble(3, product.getPrice());
+            ps.setString(4, product.getDescription());
+            ps.setInt(5, id);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Delete
+    public void deleteProduct(Connection conn, int id){
+        try{
+            PreparedStatement ps = conn.prepareStatement("DELETE FROM products WHERE id = ?");
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
