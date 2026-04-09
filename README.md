@@ -1,4 +1,4 @@
-## Project Title: TindahanPRO
+## TindahanPRO
 ### Description:
 TindahanPRO is an application Point of Sale (POS) system designed to help small businesses manage their sales, inventory, and customer data efficiently. It provides a user-friendly interface for processing transactions, tracking inventory levels, and generating reports to assist business owners in making informed decisions.
 
@@ -13,6 +13,7 @@ TindahanPRO is an application Point of Sale (POS) system designed to help small 
 - JDK 25
 - Maven installed
 - XAMPP mySQL server and Apache server running (Default to MariaDB, not MySQL)
+- (Optional) Have MariaDB jar file installed in case of needed additional configuration
 
 ### How to run
 - Extract zip file into machine
