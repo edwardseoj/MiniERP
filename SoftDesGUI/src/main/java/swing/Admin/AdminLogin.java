@@ -4,6 +4,11 @@
  */
 package Admin;
 
+import java.sql.Connection;
+
+import com.mycompany.softdesgui.Login;
+import service.CRUDService;
+
 
 /**
  *
@@ -105,17 +110,30 @@ public class AdminLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void PasswordCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordCheckboxActionPerformed
-        // TODO add your handling code here:
+        // code validation
     }//GEN-LAST:event_PasswordCheckboxActionPerformed
 
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
-        AdminDashboard dashboard = new AdminDashboard();
-        dashboard.setVisible(true);
-        this.dispose();
+        String user = EmailTextField.getText();
+	String pass = PasswordField.getText();
+	
+	if(Login.isValidCredential(user, pass)){
+		AdminDashboard dashboard = new AdminDashboard();
+		dashboard.setVisible(true);
+		this.dispose();
+	} else{
+		EmailTextField.setText("");
+		PasswordField.setText("");
+	}
+	    
+	
+	    
+	// go to main code    
+	
     }//GEN-LAST:event_LoginButtonActionPerformed
 
     private void EmailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailTextFieldActionPerformed
-        // TODO add your handling code here:
+        // code validation
     }//GEN-LAST:event_EmailTextFieldActionPerformed
 
     /**
@@ -141,6 +159,13 @@ public class AdminLogin extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new AdminLogin().setVisible(true));
+	
+	
+	String adminUser = "Admin";
+	String adminPass = "1234";
+	
+	String usernameInput;
+	String passwordInput;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
