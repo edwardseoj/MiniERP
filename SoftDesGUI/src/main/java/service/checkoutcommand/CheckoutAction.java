@@ -9,6 +9,7 @@ public class CheckoutAction {
     // add item
     // delete item
     // pay (checkout)
+    // test code
 
     List<Product> cart =  new ArrayList<>();
     public void addItem(Product product){
