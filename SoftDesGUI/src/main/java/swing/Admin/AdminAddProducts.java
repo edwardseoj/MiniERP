@@ -2,12 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Admin;
+package swing.Admin;
 import java.sql.Connection;
 import model.Product;
 import service.CRUDService;
 import database.Database;
-import testcode.CrudTest;
 
 /**
  *

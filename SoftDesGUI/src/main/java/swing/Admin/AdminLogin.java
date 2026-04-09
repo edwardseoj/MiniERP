@@ -2,12 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Admin;
-
-import java.sql.Connection;
+package swing.Admin;
 
 import com.mycompany.softdesgui.Login;
-import service.CRUDService;
 
 
 /**

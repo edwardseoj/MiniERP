@@ -22,7 +22,7 @@ public class TestDatabaseConnection {
 
         // Connection test
         Connection conn = db1.connect();
-        DatabaseInit.intializeDatabase(conn);
+        DatabaseInit.initializeDatabase(conn);
         db1.disconnect();
         System.out.println();
 

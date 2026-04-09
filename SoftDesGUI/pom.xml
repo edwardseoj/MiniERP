@@ -10,13 +10,14 @@
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
-            <version>3.5.6</version>
+            <version>3.5.8</version>
         </dependency>
     </dependencies>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>25</maven.compiler.release>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.softdesgui.SoftDesGUI</exec.mainClass>
     </properties>
     <name>TindahanPRO</name>

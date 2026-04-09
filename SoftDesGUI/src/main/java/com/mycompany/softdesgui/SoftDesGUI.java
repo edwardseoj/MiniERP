@@ -5,9 +5,13 @@
 package com.mycompany.softdesgui;
 
 
-import Admin.AdminLogin;
+import swing.Admin.AdminLogin;
 import javax.swing.SwingUtilities;
-import testcode.TestDatabaseConnection;
+
+import database.Database;
+import database.DatabaseInit;
+
+import java.sql.Connection;
 
 /**
  *
@@ -16,12 +20,16 @@ import testcode.TestDatabaseConnection;
 public class SoftDesGUI {
 
     public static void main(String[] args) {
+        Database db1 = Database.getDbInstance();
+        Connection conn = db1.connect();
+        DatabaseInit.initializeDatabase(conn);
 
-//        SwingUtilities.invokeLater(() -> {
-//            new AdminLogin().setVisible(true);
-//        });
+        SwingUtilities.invokeLater(() -> {
+            new AdminLogin().setVisible(true);
+        });
 
-        TestDatabaseConnection.testConnection();
+
+//        TestDatabaseConnection.testConnection();
 
 
     }

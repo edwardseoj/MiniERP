@@ -1,6 +1,9 @@
 package dao;
 
+import database.Database;
 import model.Product;
+
+import javax.xml.crypto.Data;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,9 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CRUDDao {
+    Database db = Database.getDbInstance();
+    Connection conn = db.connect();
 
     // Create
-    public void add(Product product, Connection conn){
+    public void add(Product product){
         // sql query to add
         String statement = "INSERT INTO products (name, stock, price, description) VALUES (?, ?, ?, ?)";
         try{
@@ -30,7 +35,7 @@ public class CRUDDao {
     }
 
     // Read
-    public List<Product> getAllProducts(Connection conn){
+    public List<Product> getAllProducts(){
         List<Product> allProducts = new ArrayList<>();
         try{
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM products");
@@ -53,7 +58,7 @@ public class CRUDDao {
     }
 
     // Update
-    public void updateProduct(Connection conn, int id, Product product){
+    public void updateProduct(int id, Product product){
         try{
             PreparedStatement ps = conn.prepareStatement("UPDATE products " +
                     "SET name = ?, stock = ?, price = ?, description = ? " +
@@ -72,7 +77,7 @@ public class CRUDDao {
     }
 
     // Delete
-    public void deleteProduct(Connection conn, int id){
+    public void deleteProduct(int id){
         try{
             PreparedStatement ps = conn.prepareStatement("DELETE FROM products WHERE id = ?");
             ps.setInt(1, id);

@@ -37,6 +37,8 @@ public class Database {
 				Class.forName("org.mariadb.jdbc.Driver");
 				connection = DriverManager.getConnection(url, username, password);
 				System.out.println("Connected to database");
+			}else{
+				System.out.println("Connection already established");
 			}
 		} catch (SQLException e ) {
 			e.printStackTrace();
