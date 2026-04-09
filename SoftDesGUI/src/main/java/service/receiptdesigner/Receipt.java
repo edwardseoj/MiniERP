@@ -1,14 +1,15 @@
 package service.receiptdesigner;
 
-public class Receipt {
-    /*
-    * Set the following:
-    * - List of product names
-    * - Discount type
-    * - Price / discounted price
-    * */
 
-    String productName;
-    double cost;
-
+// Code is wrong
+/*
+* What to put for decorator (Add-ons):
+* - discount lines
+* - VAT
+* - Loyalty points
+* */
+public interface Receipt {
+    double indivCost();
+    double totalCost();
+    String productName();
 }
