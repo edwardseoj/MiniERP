@@ -4,6 +4,8 @@
  */
 package swing.Admin;
 
+import swing.AdminLogin;
+
 /**
  *
  * @author macbookpro

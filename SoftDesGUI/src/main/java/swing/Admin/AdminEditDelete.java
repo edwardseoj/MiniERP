@@ -4,6 +4,7 @@
  */
 package swing.Admin;
 
+import swing.AdminLogin;
 import testcode.CrudTest;
 
 /**

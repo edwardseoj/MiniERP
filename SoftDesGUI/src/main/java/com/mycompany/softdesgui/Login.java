@@ -16,12 +16,14 @@ public class Login {
         }
         return false;
     }
-    public void changeScreen(String user, String pass){
-        if(!isValidCredential(user, pass)){
-            return;
+    public static String changeScreen(String user, String pass){
+        if(isValidCredential(user, pass)){
+            if(user.equals(adminUser) && pass.equals(adminPass)){
+                return "admin";
+            } else if (user.equals(empUser) && pass.equals(empPass)) {
+                return "employee";
+            }
         }
-
-        // continue this later
-
+        return "";
     }
 }

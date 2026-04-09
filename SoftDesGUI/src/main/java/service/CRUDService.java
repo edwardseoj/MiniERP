@@ -79,6 +79,19 @@ public class CRUDService {
         System.out.println("Product not found");
     }
 
+    public void reduceStock(String name){
+        List<Product> allProducts = getAllEntries();
+
+        // search for product
+        for(int i = 0; i < allProducts.size(); i++){
+            if(allProducts.get(i).getName().equalsIgnoreCase(name)){
+                dao.reduceStock(i + 1);
+                return;
+            }
+        }
+        System.out.println("Product not found");
+    }
+
 
 
 }

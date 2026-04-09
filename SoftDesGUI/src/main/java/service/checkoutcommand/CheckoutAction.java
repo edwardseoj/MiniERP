@@ -1,6 +1,7 @@
 package service.checkoutcommand;
 
 import model.Product;
+import service.CRUDService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ public class CheckoutAction {
     // delete item
     // pay (checkout)
     // test code
+    private static CRUDService service = new CRUDService();
 
     List<Product> cart =  new ArrayList<>();
     public void addItem(Product product){
@@ -27,14 +29,18 @@ public class CheckoutAction {
     }
 
     // accessed by receipt
-    public double pay(){
+    public void pay(){
         double totalPrice = 0;
         for(int i = 0; i<cart.size(); i++){
             totalPrice += cart.get(i).getPrice();
+
+            String productName = cart.get(i).getName();
+            service.reduceStock(productName);
+
+
         }
 
         // insert code that calls receipt
 
-        return totalPrice;
     }
 }

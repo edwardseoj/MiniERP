@@ -87,4 +87,15 @@ public class CRUDDao {
         }
     }
 
+    public void reduceStock(int id){
+        try{
+            PreparedStatement ps = conn.prepareStatement("UPDATE products " +
+                    "SET stock = stock - 1 " +
+                    "WHERE id = ?");
+            ps.setInt(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

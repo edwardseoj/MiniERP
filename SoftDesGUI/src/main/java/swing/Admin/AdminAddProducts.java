@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package swing.Admin;
+import swing.AdminLogin;
 import java.sql.Connection;
 import model.Product;
 import service.CRUDService;
