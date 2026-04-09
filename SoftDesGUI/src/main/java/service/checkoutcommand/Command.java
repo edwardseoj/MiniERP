@@ -1,5 +1,5 @@
 package service.checkoutcommand;
 
-public interface CheckoutCommand {
+public interface Command {
     void execute();
 }
