@@ -13,7 +13,7 @@ public class CheckoutAction {
     // test code
     private static CRUDService service = new CRUDService();
 
-    List<Product> cart =  new ArrayList<>();
+    public List<Product> cart =  new ArrayList<>();
     public void addItem(Product product){
         cart.add(product);
     }
