@@ -3,7 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package swing.Employee;
+import model.Product;
+import service.CRUDService;
 import swing.AdminLogin;
+
+import java.util.List;
 
 /**
  *
@@ -18,6 +22,9 @@ public class EmployeeCheckout extends javax.swing.JFrame {
      */
     public EmployeeCheckout() {
         initComponents();
+
+        CRUDService service = new CRUDService();
+        loadProductButtons(service.getAllEntries());
     }
 
     /**
@@ -165,7 +172,6 @@ public class EmployeeCheckout extends javax.swing.JFrame {
             ProductPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 121, Short.MAX_VALUE)
         );
->>>>>>> a9cac329cbed7c1fd7907b55f7f76af256143d8f
 
         javax.swing.GroupLayout ProductPanel7Layout = new javax.swing.GroupLayout(ProductPanel7);
         ProductPanel7.setLayout(ProductPanel7Layout);
@@ -308,6 +314,62 @@ public class EmployeeCheckout extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_ChangeAccountBtnActionPerformed
 
+
+    // custom code
+
+    private void loadProductButtons(List<Product> products) {
+        javax.swing.JPanel[] panels = {
+                ProductPanel1, ProductPanel2, ProductPanel3,
+                ProductPanel4, ProductPanel5, ProductPanel6,
+                ProductPanel7, ProductPanel8, ProductPanel9
+        };
+
+        for (int i = 0; i < panels.length; i++) {
+            panels[i].removeAll();
+            panels[i].setLayout(new java.awt.BorderLayout());
+
+            if (i < products.size()) {
+                final Product product = products.get(i);
+
+                javax.swing.JToggleButton btn = new javax.swing.JToggleButton(
+                        "<html><center>" + product.getName() + "</center></html>"
+                );
+
+                btn.setBackground(java.awt.Color.WHITE);
+                btn.setForeground(java.awt.Color.BLACK);
+                btn.setOpaque(true);
+                btn.setContentAreaFilled(true);
+                btn.setBorderPainted(false);
+                btn.setFocusPainted(false);
+                btn.setFont(new java.awt.Font("Menlo", java.awt.Font.BOLD, 14));
+                btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+                btn.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
+                btn.setMargin(new java.awt.Insets(0, 0, 0, 0));
+
+                btn.addActionListener(e -> {
+                    if (btn.isSelected()) {
+                        btn.setBackground(new java.awt.Color(0, 153, 153));
+                        btn.setForeground(java.awt.Color.WHITE);
+                        EmployeeCheckoutPanelField.setText(product.getName()); // swap with populateForm(product) later
+                        System.out.println("Button pressed");
+                    } else {
+                        btn.setBackground(java.awt.Color.WHITE);
+                        btn.setForeground(java.awt.Color.BLACK);
+                        EmployeeCheckoutPanelField.setText("");
+                        System.out.println("Button unpressed");
+                    }
+                });
+
+                panels[i].add(btn, java.awt.BorderLayout.CENTER);
+
+            } else {
+                panels[i].setBackground(java.awt.Color.WHITE);
+            }
+
+            panels[i].revalidate();
+            panels[i].repaint();
+        }
+    }
     /**
      * @param args the command line arguments
      */
