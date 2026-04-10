@@ -12,8 +12,8 @@ public class CheckoutAction {
     // pay (checkout)
     // test code
     private static CRUDService service = new CRUDService();
-
     public List<Product> cart =  new ArrayList<>();
+
     public void addItem(Product product){
         cart.add(product);
     }
