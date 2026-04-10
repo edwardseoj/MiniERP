@@ -1,4 +1,5 @@
 package service.stockobserver;
 
-public class Observer {
+public interface Observer {
+    public void update();
 }
