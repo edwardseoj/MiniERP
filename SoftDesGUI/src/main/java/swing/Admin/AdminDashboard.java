@@ -33,7 +33,6 @@ public class AdminDashboard extends javax.swing.JFrame {
                 AddProductBtn = new javax.swing.JButton();
                 EditProductBtn = new javax.swing.JButton();
                 ReportsBtn = new javax.swing.JButton();
-                TindahanPRO_Logo = new javax.swing.JLabel();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
                 setBackground(new java.awt.Color(0, 102, 255));
@@ -57,34 +56,23 @@ public class AdminDashboard extends javax.swing.JFrame {
                 ReportsBtn.setText("Reports");
                 ReportsBtn.addActionListener(this::ReportsBtnActionPerformed);
 
-                TindahanPRO_Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/Admin/TindahanPRO-Logo3.png"))); // NOI18N
-                TindahanPRO_Logo.setPreferredSize(new java.awt.Dimension(50, 50));
-
                 javax.swing.GroupLayout PanelAdminDashboardLayout = new javax.swing.GroupLayout(PanelAdminDashboard);
                 PanelAdminDashboard.setLayout(PanelAdminDashboardLayout);
                 PanelAdminDashboardLayout.setHorizontalGroup(
                         PanelAdminDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(PanelAdminDashboardLayout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addGroup(PanelAdminDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(PanelAdminDashboardLayout.createSequentialGroup()
-                                                .addComponent(TindahanPRO_Logo, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                        .addGroup(PanelAdminDashboardLayout.createSequentialGroup()
-                                                .addGap(9, 9, 9)
-                                                .addComponent(AddProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(69, 69, 69)
-                                                .addComponent(EditProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                                                .addComponent(ReportsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(38, 38, 38))))
+                                .addGap(38, 38, 38)
+                                .addComponent(AddProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(69, 69, 69)
+                                .addComponent(EditProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                                .addComponent(ReportsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(38, 38, 38))
                 );
                 PanelAdminDashboardLayout.setVerticalGroup(
                         PanelAdminDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelAdminDashboardLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(TindahanPRO_Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(153, 153, 153)
+                                .addGap(217, 217, 217)
                                 .addGroup(PanelAdminDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(AddProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(EditProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,6 +142,5 @@ public class AdminDashboard extends javax.swing.JFrame {
         private javax.swing.JButton EditProductBtn;
         private javax.swing.JPanel PanelAdminDashboard;
         private javax.swing.JButton ReportsBtn;
-        private javax.swing.JLabel TindahanPRO_Logo;
         // End of variables declaration//GEN-END:variables
 }
