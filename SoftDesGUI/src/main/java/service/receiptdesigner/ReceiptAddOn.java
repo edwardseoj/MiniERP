@@ -6,8 +6,8 @@ package service.receiptdesigner;
 * - VAT
 * - Loyalty points
 * */
-public interface Receipt {
-    double indivCost();
-    double totalCost();
-    String productName();
+public interface ReceiptAddOn {
+    double totalCost(double cost);
+
+    String discountDesc();
 }

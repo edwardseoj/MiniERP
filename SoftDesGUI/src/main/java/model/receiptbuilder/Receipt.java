@@ -1,8 +1,10 @@
 package model.receiptbuilder;
 
-import java.util.ArrayList;
-import java.util.List;
+import service.receiptdesigner.BaseReceiptAddOn;
+import service.receiptdesigner.ReceiptAddOn;
+import service.receiptdesigner.VATDecorator;
 
+import java.util.ArrayList;
 
 // only build receipt once checkout pay button is pressed
 // add more parts for builder and print for add ons like VAT
@@ -12,6 +14,8 @@ public class Receipt {
     private ArrayList<String> products;
     private ArrayList<Double> productPrices;
     private double totalPrice;
+
+
 
     private Receipt(Builder builder){
         this.storeName = builder.storeName;
@@ -69,30 +73,21 @@ public class Receipt {
                     productPrices.get(i)));
         }
 
+        // apply decorator despat
+        ReceiptAddOn receiptAddOn = new BaseReceiptAddOn();
+        // add more add ons here for decorator despat
+        receiptAddOn = new VATDecorator(receiptAddOn);
+
         sb.append("=================\n");
-        sb.append(String.format("TOTAL:          P%.2f\n", totalPrice));
+        sb.append(receiptAddOn.discountDesc());
+        sb.append(String.format("TOTAL:          P%.2f\n", receiptAddOn.totalCost(totalPrice)));
         sb.append("=================\n");
         sb.append("   Thank you!   \n");
 
         return sb.toString();
     }
 
-    // log
-    public void printReceipt(){
-        System.out.println(storeName);
-        System.out.println("Employee: " + empName);
-        System.out.println("=================\n");
 
-        for(int i = 0; i < products.size(); i++){
-            System.out.printf("%-10s $-20f",
-                    products.get(i),
-                    productPrices.get(i));
-            System.out.println();
-        }
 
-        // add more methods here
-
-        System.out.printf("\nTotal: $%.2f", totalPrice);
-    }
 
 }
