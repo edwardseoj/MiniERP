@@ -1,6 +1,5 @@
 package service.receiptdesigner;
 
-
 /*
 * What to put for decorator (Add-ons):
 * - discount lines

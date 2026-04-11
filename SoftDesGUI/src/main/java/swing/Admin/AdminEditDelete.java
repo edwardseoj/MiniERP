@@ -4,12 +4,8 @@
  */
 package swing.Admin;
 
-import model.Product;
-import service.CRUDService;
 import swing.AdminLogin;
 import testcode.CrudTest;
-
-import java.util.List;
 
 /**
  *
@@ -24,9 +20,6 @@ public class AdminEditDelete extends javax.swing.JFrame {
      */
     public AdminEditDelete() {
         initComponents();
-
-        CRUDService service = new CRUDService();
-        loadProductButtons(service.getAllEntries());
     }
 
     /**
@@ -46,34 +39,28 @@ public class AdminEditDelete extends javax.swing.JFrame {
         ChangeAccountBtn = new javax.swing.JButton();
         PowerOffBtn = new javax.swing.JButton();
         EditDeletePanel = new javax.swing.JPanel();
-        EditDeleteScreen = new javax.swing.JTextField();
         EditBtn = new javax.swing.JButton();
         DeleteBtn = new javax.swing.JButton();
-        ProductPanel1 = new javax.swing.JPanel();
-        ProductPanel2 = new javax.swing.JPanel();
-        ProductPanel3 = new javax.swing.JPanel();
-        ProductPanel4 = new javax.swing.JPanel();
-        ProductPanel5 = new javax.swing.JPanel();
-        ProductPanel6 = new javax.swing.JPanel();
-        ProductPanel7 = new javax.swing.JPanel();
-        ProductPanel8 = new javax.swing.JPanel();
-        ProductPanel9 = new javax.swing.JPanel();
+        EditDeleteNamePanel = new javax.swing.JPanel();
+        EditDeletePricePanel = new javax.swing.JPanel();
+        EditDeleteStockPanel = new javax.swing.JPanel();
+        EditDelDescScrollPanel = new javax.swing.JScrollPane();
+        EditDeleteDescPanel = new javax.swing.JPanel();
+        EditDelBtn1 = new javax.swing.JButton();
+        EdtDelBtn2 = new javax.swing.JButton();
+        EditDelBtn3 = new javax.swing.JButton();
+        EditDelBtn4 = new javax.swing.JButton();
+        EditDelBtn5 = new javax.swing.JButton();
+        EditDelBtn6 = new javax.swing.JButton();
+        EditDelBtn7 = new javax.swing.JButton();
+        EditDelBtn8 = new javax.swing.JButton();
+        EditDelBtn9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
 
         PanelAdminEditDelete.setBackground(new java.awt.Color(29, 81, 160));
-
-        javax.swing.GroupLayout PanelAdminEditDeleteLayout = new javax.swing.GroupLayout(PanelAdminEditDelete);
-        PanelAdminEditDelete.setLayout(PanelAdminEditDeleteLayout);
-        PanelAdminEditDeleteLayout.setHorizontalGroup(
-            PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 945, Short.MAX_VALUE)
-        );
-        PanelAdminEditDeleteLayout.setVerticalGroup(
-            PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 439, Short.MAX_VALUE)
-        );
+        PanelAdminEditDelete.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         EditDeleteSelectionPanel.setBackground(new java.awt.Color(0, 153, 153));
         EditDeleteSelectionPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -131,7 +118,7 @@ public class AdminEditDelete extends javax.swing.JFrame {
                 .addComponent(ProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(AddProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ChangeAccountBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PowerOffBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,8 +127,6 @@ public class AdminEditDelete extends javax.swing.JFrame {
 
         EditDeletePanel.setBackground(new java.awt.Color(0, 153, 153));
         EditDeletePanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        EditDeleteScreen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         EditBtn.setBackground(new java.awt.Color(222, 222, 28));
         EditBtn.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
@@ -155,224 +140,168 @@ public class AdminEditDelete extends javax.swing.JFrame {
         DeleteBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         DeleteBtn.addActionListener(this::DeleteBtnActionPerformed);
 
+        EditDeleteNamePanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout EditDeleteNamePanelLayout = new javax.swing.GroupLayout(EditDeleteNamePanel);
+        EditDeleteNamePanel.setLayout(EditDeleteNamePanelLayout);
+        EditDeleteNamePanelLayout.setHorizontalGroup(
+            EditDeleteNamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 209, Short.MAX_VALUE)
+        );
+        EditDeleteNamePanelLayout.setVerticalGroup(
+            EditDeleteNamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 51, Short.MAX_VALUE)
+        );
+
+        EditDeletePricePanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout EditDeletePricePanelLayout = new javax.swing.GroupLayout(EditDeletePricePanel);
+        EditDeletePricePanel.setLayout(EditDeletePricePanelLayout);
+        EditDeletePricePanelLayout.setHorizontalGroup(
+            EditDeletePricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 88, Short.MAX_VALUE)
+        );
+        EditDeletePricePanelLayout.setVerticalGroup(
+            EditDeletePricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 51, Short.MAX_VALUE)
+        );
+
+        EditDeleteStockPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout EditDeleteStockPanelLayout = new javax.swing.GroupLayout(EditDeleteStockPanel);
+        EditDeleteStockPanel.setLayout(EditDeleteStockPanelLayout);
+        EditDeleteStockPanelLayout.setHorizontalGroup(
+            EditDeleteStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 134, Short.MAX_VALUE)
+        );
+        EditDeleteStockPanelLayout.setVerticalGroup(
+            EditDeleteStockPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 51, Short.MAX_VALUE)
+        );
+
+        EditDelDescScrollPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout EditDeleteDescPanelLayout = new javax.swing.GroupLayout(EditDeleteDescPanel);
+        EditDeleteDescPanel.setLayout(EditDeleteDescPanelLayout);
+        EditDeleteDescPanelLayout.setHorizontalGroup(
+            EditDeleteDescPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 268, Short.MAX_VALUE)
+        );
+        EditDeleteDescPanelLayout.setVerticalGroup(
+            EditDeleteDescPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 168, Short.MAX_VALUE)
+        );
+
+        EditDelDescScrollPanel.setViewportView(EditDeleteDescPanel);
+
         javax.swing.GroupLayout EditDeletePanelLayout = new javax.swing.GroupLayout(EditDeletePanel);
         EditDeletePanel.setLayout(EditDeletePanelLayout);
         EditDeletePanelLayout.setHorizontalGroup(
             EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EditDeletePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addContainerGap()
                 .addGroup(EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
-            .addGroup(EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditDeletePanelLayout.createSequentialGroup()
-                    .addContainerGap(16, Short.MAX_VALUE)
-                    .addComponent(EditDeleteScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(15, Short.MAX_VALUE)))
+                    .addGroup(EditDeletePanelLayout.createSequentialGroup()
+                        .addGroup(EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(EditDeleteNamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EditDeleteStockPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EditDeletePricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditDeletePanelLayout.createSequentialGroup()
+                        .addGroup(EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(EditDelDescScrollPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(EditDeletePanelLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(EditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(46, 46, 46))))
         );
         EditDeletePanelLayout.setVerticalGroup(
             EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditDeletePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(EditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(EditDeleteNamePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(EditDeletePricePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(EditDeleteStockPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-            .addGroup(EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EditDeletePanelLayout.createSequentialGroup()
-                    .addContainerGap(14, Short.MAX_VALUE)
-                    .addComponent(EditDeleteScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(153, Short.MAX_VALUE)))
+                .addComponent(EditDelDescScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(EditDeletePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EditBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        ProductPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel1Layout = new javax.swing.GroupLayout(ProductPanel1);
-        ProductPanel1.setLayout(ProductPanel1Layout);
-        ProductPanel1Layout.setHorizontalGroup(
-            ProductPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 143, Short.MAX_VALUE)
+        javax.swing.GroupLayout PanelAdminEditDeleteLayout = new javax.swing.GroupLayout(PanelAdminEditDelete);
+        PanelAdminEditDelete.setLayout(PanelAdminEditDeleteLayout);
+        PanelAdminEditDeleteLayout.setHorizontalGroup(
+            PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelAdminEditDeleteLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(EditDeleteSelectionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(EditDelBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .addComponent(EditDelBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EditDelBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(EditDelBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
+                    .addComponent(EditDelBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EdtDelBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(EditDelBtn3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EditDelBtn6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EditDelBtn9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(EditDeletePanel, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
-        ProductPanel1Layout.setVerticalGroup(
-            ProductPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 99, Short.MAX_VALUE)
-        );
-
-        ProductPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel2Layout = new javax.swing.GroupLayout(ProductPanel2);
-        ProductPanel2.setLayout(ProductPanel2Layout);
-        ProductPanel2Layout.setHorizontalGroup(
-            ProductPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 136, Short.MAX_VALUE)
-        );
-        ProductPanel2Layout.setVerticalGroup(
-            ProductPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        ProductPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel3Layout = new javax.swing.GroupLayout(ProductPanel3);
-        ProductPanel3.setLayout(ProductPanel3Layout);
-        ProductPanel3Layout.setHorizontalGroup(
-            ProductPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel3Layout.setVerticalGroup(
-            ProductPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        ProductPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel4Layout = new javax.swing.GroupLayout(ProductPanel4);
-        ProductPanel4.setLayout(ProductPanel4Layout);
-        ProductPanel4Layout.setHorizontalGroup(
-            ProductPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel4Layout.setVerticalGroup(
-            ProductPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 114, Short.MAX_VALUE)
-        );
-
-        ProductPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel5Layout = new javax.swing.GroupLayout(ProductPanel5);
-        ProductPanel5.setLayout(ProductPanel5Layout);
-        ProductPanel5Layout.setHorizontalGroup(
-            ProductPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel5Layout.setVerticalGroup(
-            ProductPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 114, Short.MAX_VALUE)
-        );
-
-        ProductPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel6Layout = new javax.swing.GroupLayout(ProductPanel6);
-        ProductPanel6.setLayout(ProductPanel6Layout);
-        ProductPanel6Layout.setHorizontalGroup(
-            ProductPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 143, Short.MAX_VALUE)
-        );
-        ProductPanel6Layout.setVerticalGroup(
-            ProductPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 114, Short.MAX_VALUE)
-        );
-
-        ProductPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel7Layout = new javax.swing.GroupLayout(ProductPanel7);
-        ProductPanel7.setLayout(ProductPanel7Layout);
-        ProductPanel7Layout.setHorizontalGroup(
-            ProductPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel7Layout.setVerticalGroup(
-            ProductPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        ProductPanel8.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel8Layout = new javax.swing.GroupLayout(ProductPanel8);
-        ProductPanel8.setLayout(ProductPanel8Layout);
-        ProductPanel8Layout.setHorizontalGroup(
-            ProductPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel8Layout.setVerticalGroup(
-            ProductPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        ProductPanel9.setBackground(new java.awt.Color(255, 255, 255));
-        ProductPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-
-        javax.swing.GroupLayout ProductPanel9Layout = new javax.swing.GroupLayout(ProductPanel9);
-        ProductPanel9.setLayout(ProductPanel9Layout);
-        ProductPanel9Layout.setHorizontalGroup(
-            ProductPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel9Layout.setVerticalGroup(
-            ProductPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        PanelAdminEditDeleteLayout.setVerticalGroup(
+            PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelAdminEditDeleteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelAdminEditDeleteLayout.createSequentialGroup()
+                        .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(EditDeleteSelectionPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(EditDeletePanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 1, Short.MAX_VALUE))
+                    .addGroup(PanelAdminEditDeleteLayout.createSequentialGroup()
+                        .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(EdtDelBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(EditDelBtn3, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
+                            .addComponent(EditDelBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelAdminEditDeleteLayout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addComponent(EditDelBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelAdminEditDeleteLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(EditDelBtn6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(EditDelBtn4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(PanelAdminEditDeleteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(EditDelBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(EditDelBtn9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(EditDelBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(31, 31, 31))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(EditDeleteSelectionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ProductPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ProductPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ProductPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(EditDeletePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PanelAdminEditDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(PanelAdminEditDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(EditDeletePanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(7, 7, 7)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(EditDeleteSelectionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(ProductPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ProductPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ProductPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(ProductPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(39, 39, 39)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(ProductPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(ProductPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(50, 50, 50)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ProductPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ProductPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(ProductPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(12, 12, 12)))))
-                .addContainerGap())
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PanelAdminEditDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(PanelAdminEditDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -406,76 +335,7 @@ public class AdminEditDelete extends javax.swing.JFrame {
 		CrudTest.testDelete();
         }//GEN-LAST:event_DeleteBtnActionPerformed
 
-
-    // custom code
-// Simulated database fetch — replace the contents with your real DB logic
-    private java.util.ArrayList<String> fetchProductsFromDatabase() {
-        java.util.ArrayList<String> names = new java.util.ArrayList<>();
-
-        CRUDService service = new CRUDService(); // however you instantiate it
-        List<Product> products = service.getAllEntries();
-
-        for (Product p : products) {
-            names.add(p.getName()); // or whatever your getter is called
-        }
-
-        return names;
-    }
-
-    private void loadProductButtons(List<Product> products) {
-        javax.swing.JPanel[] panels = {
-                ProductPanel1, ProductPanel2, ProductPanel3,
-                ProductPanel4, ProductPanel5, ProductPanel6,
-                ProductPanel7, ProductPanel8, ProductPanel9
-        };
-
-        javax.swing.ButtonGroup group = new javax.swing.ButtonGroup();
-
-        for (int i = 0; i < panels.length; i++) {
-            panels[i].removeAll();
-            panels[i].setLayout(new java.awt.BorderLayout());
-
-            if (i < products.size()) {
-                final Product product = products.get(i);
-
-                javax.swing.JToggleButton btn = new javax.swing.JToggleButton(
-                        "<html><center>" + product.getName() + "</center></html>"
-                );
-
-                btn.setBackground(java.awt.Color.WHITE);
-                btn.setForeground(java.awt.Color.BLACK);
-                btn.setOpaque(true);
-                btn.setContentAreaFilled(true);
-                btn.setBorderPainted(false);
-                btn.setFocusPainted(false);
-                btn.setFont(new java.awt.Font("Menlo", java.awt.Font.BOLD, 14));
-                btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-                btn.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-                btn.setMargin(new java.awt.Insets(0, 0, 0, 0));
-
-                btn.addActionListener(e -> {
-                    if (btn.isSelected()) {
-                        btn.setBackground(new java.awt.Color(0, 153, 153));
-                        btn.setForeground(java.awt.Color.WHITE);
-                        EditDeleteScreen.setText(product.getName()); // replace with populateForm(product) later
-                    } else {
-                        btn.setBackground(java.awt.Color.WHITE);
-                        btn.setForeground(java.awt.Color.BLACK);
-                        EditDeleteScreen.setText("");
-                    }
-                });
-
-                group.add(btn);
-                panels[i].add(btn, java.awt.BorderLayout.CENTER);
-
-            } else {
-                panels[i].setBackground(java.awt.Color.WHITE);
-            }
-
-            panels[i].revalidate();
-            panels[i].repaint();
-        }
-    }    /**
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -505,21 +365,25 @@ public class AdminEditDelete extends javax.swing.JFrame {
     private javax.swing.JButton ChangeAccountBtn;
     private javax.swing.JButton DeleteBtn;
     private javax.swing.JButton EditBtn;
+    private javax.swing.JButton EditDelBtn1;
+    private javax.swing.JButton EditDelBtn3;
+    private javax.swing.JButton EditDelBtn4;
+    private javax.swing.JButton EditDelBtn5;
+    private javax.swing.JButton EditDelBtn6;
+    private javax.swing.JButton EditDelBtn7;
+    private javax.swing.JButton EditDelBtn8;
+    private javax.swing.JButton EditDelBtn9;
+    private javax.swing.JScrollPane EditDelDescScrollPanel;
+    private javax.swing.JPanel EditDeleteDescPanel;
+    private javax.swing.JPanel EditDeleteNamePanel;
     private javax.swing.JPanel EditDeletePanel;
-    private javax.swing.JTextField EditDeleteScreen;
+    private javax.swing.JPanel EditDeletePricePanel;
     private javax.swing.JPanel EditDeleteSelectionPanel;
+    private javax.swing.JPanel EditDeleteStockPanel;
+    private javax.swing.JButton EdtDelBtn2;
     private javax.swing.JButton HomeBtn;
     private javax.swing.JPanel PanelAdminEditDelete;
     private javax.swing.JButton PowerOffBtn;
-    private javax.swing.JPanel ProductPanel1;
-    private javax.swing.JPanel ProductPanel2;
-    private javax.swing.JPanel ProductPanel3;
-    private javax.swing.JPanel ProductPanel4;
-    private javax.swing.JPanel ProductPanel5;
-    private javax.swing.JPanel ProductPanel6;
-    private javax.swing.JPanel ProductPanel7;
-    private javax.swing.JPanel ProductPanel8;
-    private javax.swing.JPanel ProductPanel9;
     private javax.swing.JButton ProductsBtn;
     // End of variables declaration//GEN-END:variables
 }

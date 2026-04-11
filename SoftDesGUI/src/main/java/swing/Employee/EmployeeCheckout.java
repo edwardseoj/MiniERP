@@ -3,11 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package swing.Employee;
-import model.Product;
-import service.CRUDService;
 import swing.AdminLogin;
 
-import java.util.List;
 
 /**
  *
@@ -22,9 +19,6 @@ public class EmployeeCheckout extends javax.swing.JFrame {
      */
     public EmployeeCheckout() {
         initComponents();
-
-        CRUDService service = new CRUDService();
-        loadProductButtons(service.getAllEntries());
     }
 
     /**
@@ -42,23 +36,29 @@ public class EmployeeCheckout extends javax.swing.JFrame {
         ProductsBtn = new javax.swing.JButton();
         ChangeAccountBtn = new javax.swing.JButton();
         PowerOffBtn = new javax.swing.JButton();
-        ProductPanel1 = new javax.swing.JPanel();
-        ProductPanel2 = new javax.swing.JPanel();
-        ProductPanel3 = new javax.swing.JPanel();
-        ProductPanel4 = new javax.swing.JPanel();
-        ProductPanel5 = new javax.swing.JPanel();
-        ProductPanel6 = new javax.swing.JPanel();
-        ProductPanel7 = new javax.swing.JPanel();
-        ProductPanel8 = new javax.swing.JPanel();
-        ProductPanel9 = new javax.swing.JPanel();
         EmployeeCheckoutPanel = new javax.swing.JPanel();
         CheckoutBtn = new javax.swing.JButton();
-        EmployeeCheckoutPanelField = new javax.swing.JTextField();
+        EmpCheckoutNameField = new javax.swing.JTextField();
+        EmpCheckoutPriceField = new javax.swing.JTextField();
+        EmpCheckoutDiscountPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        EmpCheckoutBtn1 = new javax.swing.JButton();
+        EmpCheckoutBtn2 = new javax.swing.JButton();
+        EmpCheckoutBtn3 = new javax.swing.JButton();
+        EmpCheckoutBtn4 = new javax.swing.JButton();
+        EmpCheckoutBtn5 = new javax.swing.JButton();
+        EmpCheckoutBtn6 = new javax.swing.JButton();
+        EmpCheckoutBtn7 = new javax.swing.JButton();
+        EmpCheckoutBtn8 = new javax.swing.JButton();
+        EmpCheckoutBtn9 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 204));
 
         PanelEmployeeCheckout.setBackground(new java.awt.Color(29, 81, 160));
+        PanelEmployeeCheckout.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         EmployeeCheckoutSelectiohPanel.setBackground(new java.awt.Color(0, 153, 153));
 
@@ -100,110 +100,11 @@ public class EmployeeCheckout extends javax.swing.JFrame {
                 .addComponent(HomeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ProductsBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ChangeAccountBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PowerOffBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12))
-        );
-
-        javax.swing.GroupLayout ProductPanel1Layout = new javax.swing.GroupLayout(ProductPanel1);
-        ProductPanel1.setLayout(ProductPanel1Layout);
-        ProductPanel1Layout.setHorizontalGroup(
-            ProductPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 171, Short.MAX_VALUE)
-        );
-        ProductPanel1Layout.setVerticalGroup(
-            ProductPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel2Layout = new javax.swing.GroupLayout(ProductPanel2);
-        ProductPanel2.setLayout(ProductPanel2Layout);
-        ProductPanel2Layout.setHorizontalGroup(
-            ProductPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 171, Short.MAX_VALUE)
-        );
-        ProductPanel2Layout.setVerticalGroup(
-            ProductPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel3Layout = new javax.swing.GroupLayout(ProductPanel3);
-        ProductPanel3.setLayout(ProductPanel3Layout);
-        ProductPanel3Layout.setHorizontalGroup(
-            ProductPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 171, Short.MAX_VALUE)
-        );
-        ProductPanel3Layout.setVerticalGroup(
-            ProductPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 122, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel4Layout = new javax.swing.GroupLayout(ProductPanel4);
-        ProductPanel4.setLayout(ProductPanel4Layout);
-        ProductPanel4Layout.setHorizontalGroup(
-            ProductPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel4Layout.setVerticalGroup(
-            ProductPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 121, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel5Layout = new javax.swing.GroupLayout(ProductPanel5);
-        ProductPanel5.setLayout(ProductPanel5Layout);
-        ProductPanel5Layout.setHorizontalGroup(
-            ProductPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel5Layout.setVerticalGroup(
-            ProductPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 121, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel6Layout = new javax.swing.GroupLayout(ProductPanel6);
-        ProductPanel6.setLayout(ProductPanel6Layout);
-        ProductPanel6Layout.setHorizontalGroup(
-            ProductPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel6Layout.setVerticalGroup(
-            ProductPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 121, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel7Layout = new javax.swing.GroupLayout(ProductPanel7);
-        ProductPanel7.setLayout(ProductPanel7Layout);
-        ProductPanel7Layout.setHorizontalGroup(
-            ProductPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel7Layout.setVerticalGroup(
-            ProductPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 111, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel8Layout = new javax.swing.GroupLayout(ProductPanel8);
-        ProductPanel8.setLayout(ProductPanel8Layout);
-        ProductPanel8Layout.setHorizontalGroup(
-            ProductPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel8Layout.setVerticalGroup(
-            ProductPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout ProductPanel9Layout = new javax.swing.GroupLayout(ProductPanel9);
-        ProductPanel9.setLayout(ProductPanel9Layout);
-        ProductPanel9Layout.setHorizontalGroup(
-            ProductPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        ProductPanel9Layout.setVerticalGroup(
-            ProductPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         EmployeeCheckoutPanel.setBackground(new java.awt.Color(0, 153, 153));
@@ -214,33 +115,86 @@ public class EmployeeCheckout extends javax.swing.JFrame {
         CheckoutBtn.setText("CHECK OUT");
         CheckoutBtn.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
-        EmployeeCheckoutPanelField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        EmpCheckoutNameField.setEditable(false);
+        EmpCheckoutNameField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        EmpCheckoutNameField.addActionListener(this::EmpCheckoutNameFieldActionPerformed);
+
+        EmpCheckoutPriceField.setEditable(false);
+        EmpCheckoutPriceField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        EmpCheckoutPriceField.addActionListener(this::EmpCheckoutPriceFieldActionPerformed);
+
+        EmpCheckoutDiscountPanel.setBackground(new java.awt.Color(204, 204, 204));
+        EmpCheckoutDiscountPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel1.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel1.setText("Discount");
+
+        jCheckBox1.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jCheckBox1.setText("Senior / PWD");
+
+        jCheckBox2.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+        jCheckBox2.setText("Loyalty Points");
+
+        javax.swing.GroupLayout EmpCheckoutDiscountPanelLayout = new javax.swing.GroupLayout(EmpCheckoutDiscountPanel);
+        EmpCheckoutDiscountPanel.setLayout(EmpCheckoutDiscountPanelLayout);
+        EmpCheckoutDiscountPanelLayout.setHorizontalGroup(
+            EmpCheckoutDiscountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EmpCheckoutDiscountPanelLayout.createSequentialGroup()
+                .addGroup(EmpCheckoutDiscountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EmpCheckoutDiscountPanelLayout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jLabel1))
+                    .addGroup(EmpCheckoutDiscountPanelLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(EmpCheckoutDiscountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox2)
+                            .addComponent(jCheckBox1))))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        EmpCheckoutDiscountPanelLayout.setVerticalGroup(
+            EmpCheckoutDiscountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EmpCheckoutDiscountPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jCheckBox2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout EmployeeCheckoutPanelLayout = new javax.swing.GroupLayout(EmployeeCheckoutPanel);
         EmployeeCheckoutPanel.setLayout(EmployeeCheckoutPanelLayout);
         EmployeeCheckoutPanelLayout.setHorizontalGroup(
             EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EmployeeCheckoutPanelLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
-                .addComponent(CheckoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-            .addGroup(EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(EmployeeCheckoutPanelLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(EmployeeCheckoutPanelField, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                    .addContainerGap()))
+                .addGroup(EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(EmpCheckoutPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(EmployeeCheckoutPanelLayout.createSequentialGroup()
+                                .addGap(41, 41, 41)
+                                .addComponent(CheckoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(EmployeeCheckoutPanelLayout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(EmpCheckoutDiscountPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(EmployeeCheckoutPanelLayout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(EmpCheckoutNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         EmployeeCheckoutPanelLayout.setVerticalGroup(
             EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, EmployeeCheckoutPanelLayout.createSequentialGroup()
-                .addContainerGap(321, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(EmpCheckoutNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(EmpCheckoutPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(EmpCheckoutDiscountPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(CheckoutBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
-            .addGroup(EmployeeCheckoutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(EmployeeCheckoutPanelLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(EmployeeCheckoutPanelField, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(111, Short.MAX_VALUE)))
+                .addGap(19, 19, 19))
         );
 
         javax.swing.GroupLayout PanelEmployeeCheckoutLayout = new javax.swing.GroupLayout(PanelEmployeeCheckout);
@@ -252,19 +206,19 @@ public class EmployeeCheckout extends javax.swing.JFrame {
                 .addComponent(EmployeeCheckoutSelectiohPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ProductPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(EmpCheckoutBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EmpCheckoutBtn4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EmpCheckoutBtn7, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
                 .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ProductPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ProductPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ProductPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(EmpCheckoutBtn5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EmpCheckoutBtn2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EmpCheckoutBtn8, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(EmpCheckoutBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EmpCheckoutBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EmpCheckoutBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(EmployeeCheckoutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -272,26 +226,30 @@ public class EmployeeCheckout extends javax.swing.JFrame {
         PanelEmployeeCheckoutLayout.setVerticalGroup(
             PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(PanelEmployeeCheckoutLayout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
-                .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(EmployeeCheckoutPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEmployeeCheckoutLayout.createSequentialGroup()
-                        .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(ProductPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ProductPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ProductPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ProductPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProductPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ProductPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
-                        .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ProductPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ProductPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ProductPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(EmployeeCheckoutSelectiohPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PanelEmployeeCheckoutLayout.createSequentialGroup()
+                        .addComponent(EmployeeCheckoutSelectiohPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(PanelEmployeeCheckoutLayout.createSequentialGroup()
+                        .addComponent(EmployeeCheckoutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(PanelEmployeeCheckoutLayout.createSequentialGroup()
+                        .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmpCheckoutBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpCheckoutBtn2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpCheckoutBtn3, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmpCheckoutBtn4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpCheckoutBtn5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpCheckoutBtn6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addGroup(PanelEmployeeCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(EmpCheckoutBtn7, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpCheckoutBtn8, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EmpCheckoutBtn9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(19, 19, 19))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -314,61 +272,14 @@ public class EmployeeCheckout extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_ChangeAccountBtnActionPerformed
 
+    private void EmpCheckoutNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCheckoutNameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpCheckoutNameFieldActionPerformed
 
-    // custom code
-    private void loadProductButtons(List<Product> products) {
-        javax.swing.JPanel[] panels = {
-                ProductPanel1, ProductPanel2, ProductPanel3,
-                ProductPanel4, ProductPanel5, ProductPanel6,
-                ProductPanel7, ProductPanel8, ProductPanel9
-        };
+    private void EmpCheckoutPriceFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmpCheckoutPriceFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EmpCheckoutPriceFieldActionPerformed
 
-        for (int i = 0; i < panels.length; i++) {
-            panels[i].removeAll();
-            panels[i].setLayout(new java.awt.BorderLayout());
-
-            if (i < products.size()) {
-                final Product product = products.get(i);
-
-                javax.swing.JToggleButton btn = new javax.swing.JToggleButton(
-                        "<html><center>" + product.getName() + "</center></html>"
-                );
-
-                btn.setBackground(java.awt.Color.WHITE);
-                btn.setForeground(java.awt.Color.BLACK);
-                btn.setOpaque(true);
-                btn.setContentAreaFilled(true);
-                btn.setBorderPainted(false);
-                btn.setFocusPainted(false);
-                btn.setFont(new java.awt.Font("Menlo", java.awt.Font.BOLD, 14));
-                btn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-                btn.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
-                btn.setMargin(new java.awt.Insets(0, 0, 0, 0));
-
-                btn.addActionListener(e -> {
-                    if (btn.isSelected()) {
-                        btn.setBackground(new java.awt.Color(0, 153, 153));
-                        btn.setForeground(java.awt.Color.WHITE);
-                        EmployeeCheckoutPanelField.setText(product.getName()); // swap with populateForm(product) later
-                        System.out.println("Button pressed");
-                    } else {
-                        btn.setBackground(java.awt.Color.WHITE);
-                        btn.setForeground(java.awt.Color.BLACK);
-                        EmployeeCheckoutPanelField.setText("");
-                        System.out.println("Button unpressed");
-                    }
-                });
-
-                panels[i].add(btn, java.awt.BorderLayout.CENTER);
-
-            } else {
-                panels[i].setBackground(java.awt.Color.WHITE);
-            }
-
-            panels[i].revalidate();
-            panels[i].repaint();
-        }
-    }
     /**
      * @param args the command line arguments
      */
@@ -397,21 +308,26 @@ public class EmployeeCheckout extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ChangeAccountBtn;
     private javax.swing.JButton CheckoutBtn;
+    private javax.swing.JButton EmpCheckoutBtn1;
+    private javax.swing.JButton EmpCheckoutBtn2;
+    private javax.swing.JButton EmpCheckoutBtn3;
+    private javax.swing.JButton EmpCheckoutBtn4;
+    private javax.swing.JButton EmpCheckoutBtn5;
+    private javax.swing.JButton EmpCheckoutBtn6;
+    private javax.swing.JButton EmpCheckoutBtn7;
+    private javax.swing.JButton EmpCheckoutBtn8;
+    private javax.swing.JButton EmpCheckoutBtn9;
+    private javax.swing.JPanel EmpCheckoutDiscountPanel;
+    private javax.swing.JTextField EmpCheckoutNameField;
+    private javax.swing.JTextField EmpCheckoutPriceField;
     private javax.swing.JPanel EmployeeCheckoutPanel;
-    private javax.swing.JTextField EmployeeCheckoutPanelField;
     private javax.swing.JPanel EmployeeCheckoutSelectiohPanel;
     private javax.swing.JButton HomeBtn;
     private javax.swing.JPanel PanelEmployeeCheckout;
     private javax.swing.JButton PowerOffBtn;
-    private javax.swing.JPanel ProductPanel1;
-    private javax.swing.JPanel ProductPanel2;
-    private javax.swing.JPanel ProductPanel3;
-    private javax.swing.JPanel ProductPanel4;
-    private javax.swing.JPanel ProductPanel5;
-    private javax.swing.JPanel ProductPanel6;
-    private javax.swing.JPanel ProductPanel7;
-    private javax.swing.JPanel ProductPanel8;
-    private javax.swing.JPanel ProductPanel9;
     private javax.swing.JButton ProductsBtn;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

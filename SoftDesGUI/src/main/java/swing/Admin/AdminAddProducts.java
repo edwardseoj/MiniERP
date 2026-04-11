@@ -52,6 +52,7 @@ public class AdminAddProducts extends javax.swing.JFrame {
         setBackground(new java.awt.Color(29, 81, 160));
 
         PanelAddProducts.setBackground(new java.awt.Color(29, 81, 160));
+        PanelAddProducts.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
 
         AddProductPanel.setBackground(new java.awt.Color(0, 153, 153));
         AddProductPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
@@ -187,7 +188,7 @@ public class AdminAddProducts extends javax.swing.JFrame {
         PanelAddProductsLayout.setHorizontalGroup(
             PanelAddProductsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelAddProductsLayout.createSequentialGroup()
-                .addContainerGap(244, Short.MAX_VALUE)
+                .addContainerGap(240, Short.MAX_VALUE)
                 .addComponent(AddProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
             .addGroup(PanelAddProductsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,7 +202,7 @@ public class AdminAddProducts extends javax.swing.JFrame {
             .addGroup(PanelAddProductsLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(AddProductPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(PanelAddProductsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelAddProductsLayout.createSequentialGroup()
                     .addGap(23, 23, 23)
