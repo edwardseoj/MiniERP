@@ -5,6 +5,8 @@
 package swing;
 
 import com.mycompany.softdesgui.Login;
+import model.Sales;
+import service.CRUDService;
 import swing.Admin.AdminDashboard;
 import swing.Employee.EmployeeCheckout;
 
@@ -23,6 +25,7 @@ public class AdminLogin extends javax.swing.JFrame {
     public AdminLogin() {
         initComponents();
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.

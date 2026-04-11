@@ -12,11 +12,10 @@ public class Stock implements Observer{
     }
 
     @Override
-    public void update() {
+    public void update(String msg) {
         // sout for now
         // next: update ui
 
-        String msg = "Stock remaining for " + productName + " is now: " + stockAmount;
         System.out.println(msg);
     }
 }

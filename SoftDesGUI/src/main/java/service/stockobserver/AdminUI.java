@@ -19,7 +19,7 @@ public class AdminUI {
     // iterate through all alerts
     public void notify(String msg){
         for(Observer o : stockAlerts){
-            o.update();
+            o.update(msg);
         }
     }
 

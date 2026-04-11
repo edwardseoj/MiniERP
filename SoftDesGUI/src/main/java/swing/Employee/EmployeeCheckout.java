@@ -4,6 +4,7 @@
  */
 package swing.Employee;
 import model.Product;
+import model.Sales;
 import service.CRUDService;
 import service.checkoutcommand.*;
 import swing.AdminLogin;
@@ -43,7 +44,18 @@ public class EmployeeCheckout extends JFrame {
      */
     public EmployeeCheckout() {
         initComponents();
+        populateSales();
         loadProducts();
+    }
+
+    // custom code
+    // populate sales once checkout screen appears
+    public void populateSales(){
+        CRUDService service = new CRUDService();
+        Sales sales = Sales.getSalesInstance();
+        if(sales.getDoSetOgData()){
+            sales.setOriginalData(service.getAllEntries());
+        }
     }
 
     /**
@@ -396,6 +408,7 @@ public class EmployeeCheckout extends JFrame {
 
         EmpCheckoutNameField.setText(productNames);
         EmpCheckoutPriceField.setText("₱" + String.format("%.2f", totalPrice));
+
     }
 
 
