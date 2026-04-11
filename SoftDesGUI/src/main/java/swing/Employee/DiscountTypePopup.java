@@ -19,6 +19,13 @@ public class DiscountTypePopup extends javax.swing.JDialog {
 		super(parent, modal);
 		initComponents();
 	}
+    // Add this inside DiscountTypePopup (outside GEN regions)
+    public String getSelectedDiscount() {
+        if (SeniorPWD.isSelected()) return "SENIOR";
+        if (BulkDiscount.isSelected()) return "BULK";
+        if (PromoCode.isSelected()) return "PROMO";
+        return "NONE";
+    }
 
 	/**
 	 * This method is called from within the constructor to initialize the

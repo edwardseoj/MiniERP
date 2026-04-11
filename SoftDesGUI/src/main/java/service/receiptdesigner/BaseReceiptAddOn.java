@@ -10,6 +10,6 @@ public class BaseReceiptAddOn implements ReceiptAddOn {
 
     @Override
     public String discountDesc() {
-        return "Base receipt\n";
+        return "";
     }
 }

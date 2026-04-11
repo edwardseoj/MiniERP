@@ -7,7 +7,7 @@ public class DiscountContext {
         this.strategy = strategy;
     }
 
-    public void executeDiscount(double cost){
-        strategy.applyDiscount(cost);
+    public double applyDiscount(double cost) {
+        return strategy.applyDiscount(cost);
     }
 }

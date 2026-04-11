@@ -1,8 +1,6 @@
 package model.receiptbuilder;
 
-import service.receiptdesigner.BaseReceiptAddOn;
-import service.receiptdesigner.ReceiptAddOn;
-import service.receiptdesigner.VATDecorator;
+import service.receiptdesigner.*;
 
 import java.util.ArrayList;
 
@@ -14,15 +12,17 @@ public class Receipt {
     private ArrayList<String> products;
     private ArrayList<Double> productPrices;
     private double totalPrice;
+    private String discountType;   // NEW
+    private boolean useLoyalty;    // NEW
 
-
-
-    private Receipt(Builder builder){
-        this.storeName = builder.storeName;
-        this.empName = builder.empName;
-        this.products = builder.products;
+    private Receipt(Builder builder) {
+        this.storeName    = builder.storeName;
+        this.empName      = builder.empName;
+        this.products     = builder.products;
         this.productPrices = builder.productPrices;
-        this.totalPrice = builder.totalPrice;
+        this.totalPrice   = builder.totalPrice;
+        this.discountType = builder.discountType;   // NEW
+        this.useLoyalty   = builder.useLoyalty;     // NEW
     }
 
     public static class Builder{
@@ -31,6 +31,8 @@ public class Receipt {
         private ArrayList<String> products;
         private ArrayList<Double> productPrices;
         private double totalPrice;
+        private String discountType = "NONE";   // NEW
+        private boolean useLoyalty = false;
 
         // required fields
         public Builder(String storeName, String empName){
@@ -39,6 +41,14 @@ public class Receipt {
         }
 
         // optional fields
+        public Builder setDiscountType(String discountType) {
+            this.discountType = discountType;
+            return this;
+        }
+        public Builder setUseLoyalty(boolean useLoyalty) {
+            this.useLoyalty = useLoyalty;
+            return this;
+        }
         public Builder setProducts(ArrayList<String> products){
             this.products = products;
             return this;
@@ -62,31 +72,43 @@ public class Receipt {
     // for jtextarea
     public String formatReceipt() {
         StringBuilder sb = new StringBuilder();
-
         sb.append("=== ").append(storeName).append(" ===\n");
         sb.append("Employee: ").append(empName).append("\n");
         sb.append("=================\n");
 
         for (int i = 0; i < products.size(); i++) {
-            sb.append(String.format("%-15s P%.2f\n",
-                    products.get(i),
-                    productPrices.get(i)));
+            sb.append(String.format("%-15s P%.2f\n", products.get(i), productPrices.get(i)));
         }
 
-        // apply decorator despat
+        // --- Decorator Pattern: stack add-ons based on what was selected ---
         ReceiptAddOn receiptAddOn = new BaseReceiptAddOn();
-        // add more add ons here for decorator despat
-        receiptAddOn = new VATDecorator(receiptAddOn);
+
+        // Discount line decorator — driven by which strategy was used
+        if (!discountType.equals("NONE")) {
+            receiptAddOn = new DiscountLineDecorator(receiptAddOn, discountType);
+        }
+
+        // Loyalty points decorator — driven by the loyalty checkbox (applied last, before VAT display)
+        if (useLoyalty) {
+            receiptAddOn = new LoyaltyPointsDecorator(receiptAddOn);
+        }
 
         sb.append("=================\n");
         sb.append(receiptAddOn.discountDesc());
-        sb.append(String.format("TOTAL:          P%.2f\n", receiptAddOn.totalCost(totalPrice)));
+
+        // Calculate final total
+        double finalTotal = receiptAddOn.totalCost(totalPrice);
+
+        // Display VAT separately (informational only, not added to total)
+        double vatAmount = finalTotal * 0.12;
+        sb.append(String.format("VAT (12%%):       P%.2f\n", vatAmount));
+
+        sb.append(String.format("TOTAL:          P%.2f\n", finalTotal));
         sb.append("=================\n");
         sb.append("   Thank you!   \n");
 
         return sb.toString();
     }
-
 
 
 

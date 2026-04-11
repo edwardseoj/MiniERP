@@ -20,16 +20,15 @@ public class CheckoutAction {
         cart.add(product);
     }
 
-    public void removeItem(Product product){
-        for (int i = 0; i < cart.size(); i++){
-            if(cart.get(i).getName().equals(product.getName())){
+    public void removeItem(Product product) {
+        for (int i = 0; i < cart.size(); i++) {
+            if (cart.get(i).getName().equals(product.getName())) {
                 cart.remove(i);
-                break;
+                return; // ← EXIT early on success; don't fall through to the error log
             }
         }
-        System.out.println("Item to be removed not in cart");
+        System.out.println("Item to be removed not in cart"); // only prints if nothing was removed
     }
-
     // accessed by receipt
     public void pay(java.awt.Frame parentFrame, String empName) {
         ArrayList<String> names = new ArrayList<>();

@@ -7,12 +7,12 @@ public class VATDecorator extends ReceiptAddOnDecorator {
 
     @Override
     public double totalCost(double baseCost) {
-        double discount = receiptAddOn.totalCost(baseCost) * 0.12;
-        return receiptAddOn.totalCost(baseCost) + 0;
+        // VAT is now handled separately in Receipt.java - just pass through
+        return receiptAddOn.totalCost(baseCost);
     }
-
     @Override
     public String discountDesc() {
-        return receiptAddOn.discountDesc() + " + VAT Rate\n";
+        // VAT description is now handled separately in Receipt.java
+        return receiptAddOn.discountDesc();
     }
 }

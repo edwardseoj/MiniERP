@@ -337,15 +337,18 @@ public class EmployeeCheckout extends JFrame {
 
         private void CheckoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckoutBtnActionPerformed
                 // TODO add your handling code here:
-		
-		//discount type code
-		if(isDiscountType){
-			DiscountTypePopup discountPopup = new DiscountTypePopup(this, true);
-			discountPopup.setVisible(true);
-		}
+            String selectedDiscount = "NONE";
 
-		// pay code
-            terminal.setCommand(new CheckoutPay(action, this, "Employee Name"));
+            if (isDiscountType) {
+                DiscountTypePopup discountPopup = new DiscountTypePopup(this, true);
+                discountPopup.setVisible(true);
+                // modal dialog — code resumes here after user closes it
+                selectedDiscount = discountPopup.getSelectedDiscount();
+            }
+
+            boolean useLoyalty = LoyaltyPointsCheckbox.isSelected();
+
+            terminal.setCommand(new CheckoutPay(action, this, "Employee Name", selectedDiscount, useLoyalty));
             terminal.executeCommand();
         }//GEN-LAST:event_CheckoutBtnActionPerformed
 
