@@ -316,7 +316,6 @@ public class EmployeeCheckout extends javax.swing.JFrame {
 
 
     // custom code
-
     private void loadProductButtons(List<Product> products) {
         javax.swing.JPanel[] panels = {
                 ProductPanel1, ProductPanel2, ProductPanel3,
