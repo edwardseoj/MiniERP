@@ -24,11 +24,15 @@ public class DatabaseInit {
         };
 
         String insertStatement = "INSERT INTO products (name, stock, price, description) VALUES " +
-                "('Laptop', 10, 45000.00, 'Mid-range laptop for work and gaming')," +
-                "('Smartphone', 25, 15000.00, 'Android smartphone with good camera')," +
-                "('Headphones', 50, 1200.00, 'Noise-cancelling over-ear headphones')," +
-                "('Keyboard', 30, 800.00, 'Mechanical keyboard with RGB lighting')," +
-                "('Mouse', 40, 500.00, 'Wireless ergonomic mouse')";
+                "('Rice (1kg)', 100, 55.00, 'Regular milled rice')," +
+                "('Instant Noodles', 200, 12.00, 'Quick snack instant noodles')," +
+                "('Canned Sardines', 150, 22.00, 'Sardines in tomato sauce')," +
+                "('Coffee Sachet', 180, 8.00, '3-in-1 instant coffee')," +
+                "('Sugar (500g)', 90, 35.00, 'Refined white sugar')," +
+                "('Cooking Oil (250ml)', 80, 45.00, 'Vegetable cooking oil')," +
+                "('Biscuits Pack', 120, 10.00, 'Sweet snack biscuits')," +
+                "('Soft Drinks (1.5L)', 60, 65.00, 'Carbonated soft drink')," +
+                "('Bath Soap', 110, 25.00, 'Antibacterial bar soap')";
 
         try {
             // Execute setup statements
