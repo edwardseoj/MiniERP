@@ -1,4 +1,4 @@
-package service.receiptdesigner;
+package service.receiptdecorator;
 
 /*
 * What to put for decorator (Add-ons):

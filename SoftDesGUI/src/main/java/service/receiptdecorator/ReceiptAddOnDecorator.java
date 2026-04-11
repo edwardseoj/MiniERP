@@ -1,4 +1,4 @@
-package service.receiptdesigner;
+package service.receiptdecorator;
 
 abstract class ReceiptAddOnDecorator implements ReceiptAddOn {
     protected ReceiptAddOn receiptAddOn;

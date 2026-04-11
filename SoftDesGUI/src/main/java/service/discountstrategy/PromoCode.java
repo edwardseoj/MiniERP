@@ -1,4 +1,4 @@
-package service.discounttype;
+package service.discountstrategy;
 
 public class PromoCode implements DiscountStrategy{
     @Override

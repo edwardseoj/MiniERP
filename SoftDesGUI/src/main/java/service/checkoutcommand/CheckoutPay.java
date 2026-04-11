@@ -2,13 +2,12 @@ package service.checkoutcommand;
 
 import model.Product;
 import model.receiptbuilder.Receipt;
-import service.discounttype.BulkPurchase;
-import service.discounttype.DiscountContext;
-import service.discounttype.PromoCode;
-import service.discounttype.SeniorPWD;
+import service.discountstrategy.BulkPurchase;
+import service.discountstrategy.DiscountContext;
+import service.discountstrategy.PromoCode;
+import service.discountstrategy.SeniorPWD;
 import swing.Employee.ReceiptPopUp;
 
-import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,8 +15,8 @@ public class CheckoutPay implements Command {
     private CheckoutAction action;
     private java.awt.Frame parentFrame;
     private String empName;
-    private String discountType;   // NEW
-    private boolean useLoyalty;    // NEW
+    private String discountType;
+    private boolean useLoyalty;
 
     public CheckoutPay(CheckoutAction action, java.awt.Frame parentFrame, String empName,
                        String discountType, boolean useLoyalty) {

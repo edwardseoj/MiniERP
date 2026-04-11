@@ -1,4 +1,4 @@
-package service.receiptdesigner;
+package service.receiptdecorator;
 
 public class DiscountLineDecorator extends ReceiptAddOnDecorator {
     private final String discountType;

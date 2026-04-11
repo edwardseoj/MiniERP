@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckoutAction {
-    // add item
-    // delete item
-    // pay (checkout)
-    // test code
     private static CRUDService service = new CRUDService();
     public List<Product> cart =  new ArrayList<>();
 
@@ -24,12 +20,11 @@ public class CheckoutAction {
         for (int i = 0; i < cart.size(); i++) {
             if (cart.get(i).getName().equals(product.getName())) {
                 cart.remove(i);
-                return; // ← EXIT early on success; don't fall through to the error log
+                return;
             }
         }
-        System.out.println("Item to be removed not in cart"); // only prints if nothing was removed
+        System.out.println("Item to be removed not in cart");
     }
-    // accessed by receipt
     public void pay(java.awt.Frame parentFrame, String empName) {
         ArrayList<String> names = new ArrayList<>();
         ArrayList<Double> prices = new ArrayList<>();
@@ -54,7 +49,6 @@ public class CheckoutAction {
         popup.populate(receipt);
         popup.setVisible(true);
     }
-    // return list
     public List<Product> getCart(){
         return cart;
     }

@@ -1,4 +1,4 @@
-package service.discounttype;
+package service.discountstrategy;
 
 public class BulkPurchase implements DiscountStrategy{
     @Override

@@ -1,4 +1,4 @@
-package service.receiptdesigner;
+package service.receiptdecorator;
 
 public class LoyaltyPointsDecorator extends ReceiptAddOnDecorator {
     public LoyaltyPointsDecorator(ReceiptAddOn receiptAddOn) {
