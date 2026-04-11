@@ -44,6 +44,7 @@ public class CheckoutAction {
         }
 
         // hardcoded store name and employee name
+        // builder call
         Receipt receipt = new Receipt.Builder("TindahanPRO", empName)
                 .setProducts(names)
                 .setProductPrices(prices)
