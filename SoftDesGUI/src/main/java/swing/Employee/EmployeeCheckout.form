@@ -92,22 +92,28 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="EmpCheckoutBtn1" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                              <Component id="EmpCheckoutBtn2" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="EmpCheckoutBtn3" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpCheckoutBtn1" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="EmpCheckoutBtn2" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="EmpCheckoutBtn4" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                              <Component id="EmpCheckoutBtn5" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="EmpCheckoutBtn6" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpCheckoutBtn4" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="EmpCheckoutBtn5" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace pref="42" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="EmpCheckoutBtn7" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
-                              <Component id="EmpCheckoutBtn8" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="EmpCheckoutBtn9" alignment="0" min="-2" pref="110" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="EmpCheckoutBtn7" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                                  <Component id="EmpCheckoutBtn8" alignment="3" min="-2" pref="110" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
@@ -212,6 +218,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PowerOffBtnActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

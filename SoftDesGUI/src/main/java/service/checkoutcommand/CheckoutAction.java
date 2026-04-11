@@ -43,4 +43,9 @@ public class CheckoutAction {
         // insert code that calls receipt
 
     }
+
+    // return list
+    public List<Product> getCart(){
+        return cart;
+    }
 }
