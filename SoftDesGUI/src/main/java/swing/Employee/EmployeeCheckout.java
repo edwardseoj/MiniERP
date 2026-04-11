@@ -321,10 +321,8 @@ public class EmployeeCheckout extends JFrame {
         private void CheckoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckoutBtnActionPerformed
                 // TODO add your handling code here:
 
-            CheckoutBtn.addActionListener(e -> {
-                terminal.setCommand(new CheckoutPay(action, this, "Employee Name"));
-                terminal.executeCommand();
-            });
+            terminal.setCommand(new CheckoutPay(action, this, "Employee Name"));
+            terminal.executeCommand();
         }//GEN-LAST:event_CheckoutBtnActionPerformed
 
     /**

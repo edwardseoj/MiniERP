@@ -42,6 +42,7 @@ public class ReceiptPopUp extends javax.swing.JDialog {
                 ReceiptLabel = new javax.swing.JLabel();
                 ReceiptDetailScrollpanel = new javax.swing.JScrollPane();
                 ReceiptDetailTextArea = new javax.swing.JTextArea();
+                ExitRecieptDialogBtn = new javax.swing.JButton();
 
                 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
                 setBackground(new java.awt.Color(0, 153, 153));
@@ -56,18 +57,28 @@ public class ReceiptPopUp extends javax.swing.JDialog {
                 ReceiptDetailTextArea.setWrapStyleWord(true);
                 ReceiptDetailScrollpanel.setViewportView(ReceiptDetailTextArea);
 
+                ExitRecieptDialogBtn.setText("Exit");
+                ExitRecieptDialogBtn.addActionListener(this::ExitRecieptDialogBtnActionPerformed);
+
                 javax.swing.GroupLayout DialogBGLayout = new javax.swing.GroupLayout(DialogBG);
                 DialogBG.setLayout(DialogBGLayout);
                 DialogBGLayout.setHorizontalGroup(
                         DialogBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DialogBGLayout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ReceiptLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(162, 162, 162))
                         .addGroup(DialogBGLayout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(ReceiptDetailScrollpanel)
-                                .addContainerGap())
+                                .addGroup(DialogBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(DialogBGLayout.createSequentialGroup()
+                                                .addComponent(ReceiptDetailScrollpanel, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                                                .addContainerGap())
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DialogBGLayout.createSequentialGroup()
+                                                .addGap(0, 0, Short.MAX_VALUE)
+                                                .addGroup(DialogBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DialogBGLayout.createSequentialGroup()
+                                                                .addComponent(ReceiptLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(162, 162, 162))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, DialogBGLayout.createSequentialGroup()
+                                                                .addComponent(ExitRecieptDialogBtn)
+                                                                .addContainerGap())))))
                 );
                 DialogBGLayout.setVerticalGroup(
                         DialogBGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -75,8 +86,10 @@ public class ReceiptPopUp extends javax.swing.JDialog {
                                 .addContainerGap()
                                 .addComponent(ReceiptLabel)
                                 .addGap(18, 18, 18)
-                                .addComponent(ReceiptDetailScrollpanel)
-                                .addContainerGap())
+                                .addComponent(ReceiptDetailScrollpanel, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ExitRecieptDialogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
                 javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -89,13 +102,20 @@ public class ReceiptPopUp extends javax.swing.JDialog {
                 );
                 layout.setVerticalGroup(
                         layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 300, Short.MAX_VALUE)
+                        .addGap(0, 389, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(DialogBG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                        .addComponent(DialogBG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
                 );
 
                 pack();
         }// </editor-fold>//GEN-END:initComponents
+
+        private void ExitRecieptDialogBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitRecieptDialogBtnActionPerformed
+                // TODO add your handling code here:
+		dispose();
+        }//GEN-LAST:event_ExitRecieptDialogBtnActionPerformed
 
 
 
@@ -138,9 +158,9 @@ public class ReceiptPopUp extends javax.swing.JDialog {
 
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JPanel DialogBG;
+        private javax.swing.JButton ExitRecieptDialogBtn;
         private javax.swing.JScrollPane ReceiptDetailScrollpanel;
         private javax.swing.JTextArea ReceiptDetailTextArea;
         private javax.swing.JLabel ReceiptLabel;
-        private javax.swing.JScrollPane jScrollPane1;
         // End of variables declaration//GEN-END:variables
 }
