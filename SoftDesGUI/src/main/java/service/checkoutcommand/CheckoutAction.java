@@ -1,7 +1,9 @@
 package service.checkoutcommand;
 
 import model.Product;
+import model.receiptbuilder.Receipt;
 import service.CRUDService;
+import swing.Employee.ReceiptPopUp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,21 +31,29 @@ public class CheckoutAction {
     }
 
     // accessed by receipt
-    public void pay(){
+    public void pay(java.awt.Frame parentFrame, String empName) {
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Double> prices = new ArrayList<>();
         double totalPrice = 0;
-        for(int i = 0; i<cart.size(); i++){
-            totalPrice += cart.get(i).getPrice();
 
-            String productName = cart.get(i).getName();
-            service.reduceStock(productName);
-
-
+        for (Product p : cart) {
+            names.add(p.getName());
+            prices.add(p.getPrice());
+            totalPrice += p.getPrice();
+            service.reduceStock(p.getName());
         }
 
-        // insert code that calls receipt
+        // hardcoded store name and employee name
+        Receipt receipt = new Receipt.Builder("TindahanPRO", empName)
+                .setProducts(names)
+                .setProductPrices(prices)
+                .setTotalPrice(totalPrice)
+                .build();
 
+        ReceiptPopUp popup = new ReceiptPopUp(parentFrame, true);
+        popup.populate(receipt);
+        popup.setVisible(true);
     }
-
     // return list
     public List<Product> getCart(){
         return cart;

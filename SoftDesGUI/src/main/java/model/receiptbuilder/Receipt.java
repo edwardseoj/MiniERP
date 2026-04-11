@@ -55,6 +55,29 @@ public class Receipt {
         }
     }
 
+    // for jtextarea
+    public String formatReceipt() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("=== ").append(storeName).append(" ===\n");
+        sb.append("Employee: ").append(empName).append("\n");
+        sb.append("=================\n");
+
+        for (int i = 0; i < products.size(); i++) {
+            sb.append(String.format("%-15s P%.2f\n",
+                    products.get(i),
+                    productPrices.get(i)));
+        }
+
+        sb.append("=================\n");
+        sb.append(String.format("TOTAL:          P%.2f\n", totalPrice));
+        sb.append("=================\n");
+        sb.append("   Thank you!   \n");
+
+        return sb.toString();
+    }
+
+    // log
     public void printReceipt(){
         System.out.println(storeName);
         System.out.println("Employee: " + empName);
