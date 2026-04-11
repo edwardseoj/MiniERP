@@ -1,6 +1,7 @@
 swing/Admin/AdminReports.class
 service/checkoutcommand/Command.class
 service/receiptdesigner/BaseReceipt.class
+swing/Employee/DiscountTypePopup$1.class
 model/Product.class
 swing/JFrame1.class
 service/stockobserver/AdminUI.class
@@ -14,8 +15,12 @@ service/checkoutcommand/CheckoutRemoveItem.class
 dao/CRUDDao.class
 testcode/CrudTest.class
 swing/Employee/EmployeeCheckout.class
+swing/Employee/DiscountTypePopup.class
+swing/Employee/DiscountTypePopup$1$1.class
 service/checkoutcommand/CheckoutAction.class
 testcode/TestDatabaseConnection.class
+swing/Employee/ReceiptPopUp$1$1.class
+swing/Employee/ReceiptPopUp.class
 service/checkoutcommand/CheckoutAddItem.class
 com/mycompany/softdesgui/Login.class
 service/receiptdesigner/ReceiptDecorator.class
@@ -25,6 +30,8 @@ model/receiptbuilder/Receipt$Builder.class
 service/CRUDService.class
 model/receiptbuilder/Receipt.class
 swing/Admin/AdminEditDelete.class
+swing/Employee/ReceiptPopUp$1.class
+model/Sales.class
 swing/Admin/AdminDashboard.class
 service/receiptdesigner/Receipt.class
 database/DatabaseInit.class

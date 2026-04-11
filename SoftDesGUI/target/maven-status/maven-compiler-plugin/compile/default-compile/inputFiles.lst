@@ -5,6 +5,7 @@
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/database/DatabaseInit.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/model/Employee.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/model/Product.java
+/home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/model/Sales.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/model/receiptbuilder/Receipt.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/service/CRUDService.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/service/checkoutcommand/CheckoutAction.java
@@ -24,7 +25,9 @@
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/Admin/AdminEditDelete.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/Admin/AdminReports.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/AdminLogin.java
+/home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/Employee/DiscountTypePopup.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/Employee/EmployeeCheckout.java
+/home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/Employee/ReceiptPopUp.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/swing/JFrame1.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/testcode/CrudTest.java
 /home/cereal/NetBeansProjects/MiniERP/SoftDesGUI/src/main/java/testcode/TestDatabaseConnection.java

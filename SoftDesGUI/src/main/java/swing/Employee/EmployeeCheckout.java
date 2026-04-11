@@ -38,6 +38,10 @@ public class EmployeeCheckout extends JFrame {
     // for command design pattern
     CheckoutAction action = new CheckoutAction();
     POSTerminal terminal = new POSTerminal();
+    
+    // global checkbox var
+    boolean isDiscountType = false;
+    boolean isLoyaltyPoints = false;
 
     /**
      * Creates new form EmployeeCheckout
@@ -79,8 +83,8 @@ public class EmployeeCheckout extends JFrame {
                 EmpCheckoutPriceField = new javax.swing.JTextField();
                 EmpCheckoutDiscountPanel = new javax.swing.JPanel();
                 jLabel1 = new javax.swing.JLabel();
-                jCheckBox1 = new javax.swing.JCheckBox();
-                jCheckBox2 = new javax.swing.JCheckBox();
+                DiscountCheckbox = new javax.swing.JCheckBox();
+                LoyaltyPointsCheckbox = new javax.swing.JCheckBox();
                 EmpCheckoutBtn1 = new javax.swing.JButton();
                 EmpCheckoutBtn2 = new javax.swing.JButton();
                 EmpCheckoutBtn3 = new javax.swing.JButton();
@@ -168,11 +172,12 @@ public class EmployeeCheckout extends JFrame {
                 jLabel1.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
                 jLabel1.setText("Discount");
 
-                jCheckBox1.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
-                jCheckBox1.setText("Senior / PWD");
+                DiscountCheckbox.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+                DiscountCheckbox.setText("Discount");
+                DiscountCheckbox.addActionListener(this::DiscountCheckboxActionPerformed);
 
-                jCheckBox2.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
-                jCheckBox2.setText("Loyalty Points");
+                LoyaltyPointsCheckbox.setFont(new java.awt.Font("Menlo", 0, 13)); // NOI18N
+                LoyaltyPointsCheckbox.setText("Loyalty Points");
 
                 javax.swing.GroupLayout EmpCheckoutDiscountPanelLayout = new javax.swing.GroupLayout(EmpCheckoutDiscountPanel);
                 EmpCheckoutDiscountPanel.setLayout(EmpCheckoutDiscountPanelLayout);
@@ -186,8 +191,8 @@ public class EmployeeCheckout extends JFrame {
                                         .addGroup(EmpCheckoutDiscountPanelLayout.createSequentialGroup()
                                                 .addGap(14, 14, 14)
                                                 .addGroup(EmpCheckoutDiscountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jCheckBox2)
-                                                        .addComponent(jCheckBox1))))
+                                                        .addComponent(LoyaltyPointsCheckbox)
+                                                        .addComponent(DiscountCheckbox))))
                                 .addContainerGap(17, Short.MAX_VALUE))
                 );
                 EmpCheckoutDiscountPanelLayout.setVerticalGroup(
@@ -196,9 +201,9 @@ public class EmployeeCheckout extends JFrame {
                                 .addContainerGap()
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCheckBox1)
+                                .addComponent(DiscountCheckbox)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jCheckBox2)
+                                .addComponent(LoyaltyPointsCheckbox)
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 );
 
@@ -332,10 +337,26 @@ public class EmployeeCheckout extends JFrame {
 
         private void CheckoutBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheckoutBtnActionPerformed
                 // TODO add your handling code here:
+		
+		//discount type code
+		if(isDiscountType){
+			DiscountTypePopup discountPopup = new DiscountTypePopup(this, true);
+			discountPopup.setVisible(true);
+		}
 
+		// pay code
             terminal.setCommand(new CheckoutPay(action, this, "Employee Name"));
             terminal.executeCommand();
         }//GEN-LAST:event_CheckoutBtnActionPerformed
+
+        private void DiscountCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DiscountCheckboxActionPerformed
+                // TODO add your handling code here:
+		if(isDiscountType){
+			isDiscountType = false;
+		}else{
+			isDiscountType = true;
+		}
+        }//GEN-LAST:event_DiscountCheckboxActionPerformed
 
     /**
      */
@@ -437,6 +458,7 @@ public class EmployeeCheckout extends JFrame {
         // Variables declaration - do not modify//GEN-BEGIN:variables
         private javax.swing.JButton ChangeAccountBtn;
         private javax.swing.JButton CheckoutBtn;
+        private javax.swing.JCheckBox DiscountCheckbox;
         private javax.swing.JButton EmpCheckoutBtn1;
         private javax.swing.JButton EmpCheckoutBtn2;
         private javax.swing.JButton EmpCheckoutBtn3;
@@ -452,11 +474,10 @@ public class EmployeeCheckout extends JFrame {
         private javax.swing.JPanel EmployeeCheckoutPanel;
         private javax.swing.JPanel EmployeeCheckoutSelectiohPanel;
         private javax.swing.JButton HomeBtn;
+        private javax.swing.JCheckBox LoyaltyPointsCheckbox;
         private javax.swing.JPanel PanelEmployeeCheckout;
         private javax.swing.JButton PowerOffBtn;
         private javax.swing.JButton ProductsBtn;
-        private javax.swing.JCheckBox jCheckBox1;
-        private javax.swing.JCheckBox jCheckBox2;
         private javax.swing.JLabel jLabel1;
         // End of variables declaration//GEN-END:variables
 }
